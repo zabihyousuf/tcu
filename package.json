@@ -1,0 +1,93 @@
+{
+    "name": "vue-electron-flask",
+    "version": "1.0.1",
+    "private": true,
+    "description": "Simple template for combining Electron with Vue3 and Flask",
+    "author": "Sanjay Soundarajan",
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint",
+        "electron:build": "vue-cli-service electron:build",
+        "electron:build-preclean": "node ./scripts/prebuild.js",
+        "electron:build-release": "vue-cli-service electron:build -p always",
+        "electron:serve": "yarn electron:serve-precopy && vue-cli-service electron:serve",
+        "electron:serve-precopy": "copyfiles -u 1 ./src/pyflask/** ./dist_electron",
+        "postinstall": "electron-builder install-app-deps",
+        "postuninstall": "electron-builder install-app-deps",
+        "python:build": "python -m PyInstaller --onefile --clean ./src/pyflask/api.py --distpath ./src/pyflaskdist",
+        "python:dev": "python ./src/pyflask/api.py"
+    },
+    "main": "background.js",
+    "dependencies": {
+        "@electron/remote": "^2.0.0",
+        "@mdi/font": "5.9.55",
+        "axios": "^0.21.2",
+        "axios-retry": "^3.2.4",
+        "core-js": "^3.6.5",
+        "electron-log": "^4.4.1",
+        "electron-updater": "^4.6.5",
+        "fs": "^0.0.1-security",
+        "node-sass": "^6.0.1",
+        "ps-tree": "^1.2.0",
+        "roboto-fontface": "*",
+        "semver": "^7.3.5",
+        "vue": "^3.0.0",
+        "vue-router": "4",
+        "vuetify": "^3.0.0-beta.0",
+        "vuex": "^4.0.2",
+        "webfontloader": "^1.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.12.16",
+        "@babel/eslint-parser": "^7.12.16",
+        "@vue/cli-plugin-babel": "~5.0.4",
+        "@vue/cli-plugin-eslint": "~5.0.4",
+        "@vue/cli-service": "~5.0.4",
+        "@vue/compiler-sfc": "^3.0.0",
+        "autoprefixer": "^9",
+        "copyfiles": "^2.4.1",
+        "electron": "^17.0.0",
+        "electron-builder": "^22.14.13",
+        "electron-devtools-installer": "^3.1.0",
+        "electron-notarize": "^1.1.1",
+        "eslint": "^7.32.0",
+        "eslint-plugin-vue": "^8.0.3",
+        "postcss": "^8",
+        "prettier": "^2.3.2",
+        "sass": "^1.38.0",
+        "sass-loader": "^10.0.0",
+        "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+        "vue-cli-plugin-electron-builder": "~2.1.1",
+        "vue-cli-plugin-vuetify": "~2.4.8",
+        "vuetify-loader": "^2.0.0-alpha.0"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/vue3-essential",
+            "eslint:recommended"
+        ],
+        "parserOptions": {
+            "parser": "@babel/eslint-parser"
+        },
+        "rules": {}
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ],
+    "engines": {
+        "node": "^16.13.0"
+    },
+    "keywords": [],
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/megasanjay/electron-vue3-flask.git"
+    }
+}

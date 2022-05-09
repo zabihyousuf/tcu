@@ -1,0 +1,90 @@
+$color: rgb(200, 200, 200);
+$color-light: white;
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+html,
+body {
+    background-color: rgb(10, 10, 10) !important;
+}
+
+#bg {
+    background-color: rgb(10, 10, 10) !important;
+    // font-family: 'Share Tech Mono', monospace;
+    letter-spacing: 1px;
+    padding: 0;
+    margin: 0;
+    background-color: #0A0B0B;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#app_text {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+#clock {
+    font-family: 'Share Tech Mono', monospace;
+    background-color: rgb(10, 10, 10) !important;
+    order: 0;
+    align-self: center;
+    color: $color;
+    //text-shadow: 0px 0px 25px $color;
+    .time {
+        font-size: 23em;
+    }
+    .text {
+        margin-top: 30px;
+        font-size: 12em;
+        color: rgba($color, .15);
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color .1s ease-out;
+            &:hover {
+                color: $color;
+            }
+        }
+    }
+    .btn-container {
+        display: flex;
+        margin-top: 15px;
+        a {
+            text-align: center;
+            font-family: 'Share Tech Mono', monospace;
+            background: transparent;
+            //border: 3px solid $color;
+            border: none;
+            color: $color;
+            padding: 10px 15px;
+            margin: 0 10px;
+            text-transform: uppercase;
+            font-size: 5em;
+            cursor: pointer;
+            //text-shadow: 0px 0px 10px $color;
+            flex-grow: 1;
+            transition: color .1s ease-out;
+            &:hover {
+                color: $color-light;
+            }
+        }
+    }
+}
+
+.v-select__selections {
+    height: 100px;
+}
+
+.v-label {
+    font-size: 1.5em !important;
+}
+
+.v-list-item__title {
+    font-size: 1.5em !important;
+}
+
+.theme--light.v-application {
+    background-color: rgb(10, 10, 10) !important;
+}
