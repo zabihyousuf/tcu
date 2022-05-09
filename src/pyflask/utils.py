@@ -2,7 +2,7 @@ from RaceTrack import RaceTrack
 def findClosestTrack(device, db_connection):
     # Find the closest track to the device
     # Get the tracks from the database
-    cursor = db.cursor()
+    cursor = db_connection.cursor()
     sql = "SELECT * FROM `enable_ninja_local`.tracks"
     cursor.execute(sql)
     tracks = cursor.fetchall()

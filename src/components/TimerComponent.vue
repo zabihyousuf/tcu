@@ -42,7 +42,7 @@
       <v-col cols="12">
         <v-container class="ml-15 mt-15" fill-height fluid id="bg">
           <div id="clock">
-            <v-row justify="center"  class="mt-n9 mb-n12"
+            <v-row justify="center" class="mt-n9 mb-n12"
               ><div class="mb-n9">
                 <span id="app_text" style="font-size: 42px">Lap </span
                 ><span style="font-size: 9em">
@@ -170,6 +170,7 @@ export default {
     },
   },
   methods: {
+    
     start() {
       if (this.running) return;
 
@@ -184,6 +185,7 @@ export default {
 
       this.started = setInterval(this.clockRunning, 10);
       this.running = true;
+      this.$store.commit("started", true);
 
       if (this.running === true) {
         event.preventDefault();
@@ -247,6 +249,8 @@ export default {
         this.zeroPrefix(sec, 2) +
         "." +
         this.zeroPrefix(ms, 3);
+      
+      this.$store.dispatch('getIfLapped');
     },
     zeroPrefix(num, digit) {
       var zero = "";
@@ -287,11 +291,6 @@ export default {
       seconds = seconds < 10 ? "0" + seconds : seconds;
 
       return minutes + ":" + seconds + "." + milliseconds;
-    },
-    getLapLocationMethod() {
-      if (this.running) {
-        this.getLapLocation = setInterval(this.getLapLocationMethod, 1000);
-      }
     },
   },
   beforeUnmount() {

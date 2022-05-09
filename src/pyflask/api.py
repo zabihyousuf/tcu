@@ -50,7 +50,7 @@ serialPort = serial.Serial(port, baudrate=9600, timeout=0.5)
 @api.route("/api_version", endpoint="apiVersion")
 class ApiVersion(Resource):
     def get(self):
-        
+
         return API_VERSION
 
 
@@ -142,28 +142,37 @@ def add_session():
 @api.route("/start", endpoint="start")
 class Start(Resource):
     def get(self):
-        recording_on = Value('b', True)
-        p = Process(target=Start_Recording_Data, args=(recording_on))
-        p.start()
-        return "Recording started"
+        try:
+            recording_on = Value('b', True)
+            p = Process(target=Start_Recording_Data, args=(recording_on))
+            p.start()
+            return "Recording started"
+        except Exception as e:
+            return jsonify({"error": f"An error occurred in the start method with exception ({e})"})
+
 
 @api.route("/getIfLapped", endpoint="getIfLapped")
 class GetIfLapped(Resource):
     def get(self):
         global CurrentDevice
-        Px = CurrentDevice.current_latitude
-        Py = CurrentDevice.current_longitude
+        try:
 
-        Qx = CurrentRaceTrack.start_latitude
-        Qy = CurrentRaceTrack.start_longitude
+            Px = CurrentDevice.current_latitude
+            Py = CurrentDevice.current_longitude
 
-        if math.dist(Px, Py, Qx, Qy) < 5:
-            return 1
-        return 0
+            Qx = CurrentRaceTrack.start_latitude
+            Qy = CurrentRaceTrack.start_longitude
+
+            if math.dist(Px, Py, Qx, Qy) < 1:
+                return jsonify({"lapped": true})
+            return jsonify({"lapped": false})
+        except Exception as e:
+            return jsonify({"error": f"An error occurred in the getIfLapped method with exception ({e})"})
+
 
 def Start_Recording_Data(append_to_object):
     global finaList, CurrentDevice, serialPort, CurrentRaceTrack
-    serialPort = serial.Serial(port, baudrate = 9600, timeout = 0.5)
+    serialPort = serial.Serial(port, baudrate=9600, timeout=0.1)
     while True:
         str = serialPort.readline()
         obj = parseGPS(str)
@@ -178,7 +187,8 @@ def Start_Recording_Data(append_to_object):
             CurrentDevice.addToObject(obj)
             CurrentDevice.current_latitude = obj.latitude
             CurrentDevice.current_longitude = obj.longitude
-        time.sleep(.5)
+        time.sleep(.1)
+
 
 def parseGPS(str):
     if str.find('GGA') > 0:

@@ -17,7 +17,8 @@ export default createStore({
         lapped: false,
         appPath: "",
         MIN_API_VERSION: "1.1.0",
-        error: ''
+        error: '',
+        started: false,
     },
     getters: {
         get(state) {
@@ -74,6 +75,18 @@ export default createStore({
                     commit('set', ['loading', false]);
                 });
         },
+
+        async getIfLapped({ commit, }) {
+            commit('set', ['loading', true]);
+            axios
+                .get(`${this.state.apiUrl}/GetIfLapped`)
+                .then((response) => {
+                    commit('set', ['lapped', response.data.lapped]);
+                })
+                .catch((error) => {
+                    console.error(error);
+                });
+        }
     },
     modules: {}
 })
