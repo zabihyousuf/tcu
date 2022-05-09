@@ -163,14 +163,27 @@ export default {
       return this.$store.state.error;
     },
     getLapped() {
-      if (this.$store.state.lapped) {
+      if (this.$store.state.lapped && this.running) {
         this.lap();
       }
       return this.$store.state.lapped;
     },
   },
+  mounted() {
+    this.seeIfSessionShouldStart();
+  },
   methods: {
-    
+    seeIfSessionShouldStart() {
+      if (!this.running) {
+
+        this.$store.dispatch("getIfLapped");
+        if (this.$store.state.lapped) {
+          this.start();
+        } else {
+          setInterval(this.seeIfSessionShouldStart, 1000);
+        }
+      }
+    },
     start() {
       if (this.running) return;
 
@@ -249,8 +262,8 @@ export default {
         this.zeroPrefix(sec, 2) +
         "." +
         this.zeroPrefix(ms, 3);
-      
-      this.$store.dispatch('getIfLapped');
+
+      this.$store.dispatch("getIfLapped");
     },
     zeroPrefix(num, digit) {
       var zero = "";

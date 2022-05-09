@@ -163,7 +163,7 @@ class GetIfLapped(Resource):
             Qx = CurrentRaceTrack.start_latitude
             Qy = CurrentRaceTrack.start_longitude
 
-            if math.dist(Px, Py, Qx, Qy) < 1:
+            if math.dist(Px, Py, Qx, Qy) < 5:
                 return jsonify({"lapped": true})
             return jsonify({"lapped": false})
         except Exception as e:
@@ -172,7 +172,7 @@ class GetIfLapped(Resource):
 
 def Start_Recording_Data(append_to_object):
     global finaList, CurrentDevice, serialPort, CurrentRaceTrack
-    serialPort = serial.Serial(port, baudrate=9600, timeout=0.1)
+    serialPort = serial.Serial(port, baudrate=9600, timeout=0.5)
     while True:
         str = serialPort.readline()
         obj = parseGPS(str)
@@ -187,7 +187,7 @@ def Start_Recording_Data(append_to_object):
             CurrentDevice.addToObject(obj)
             CurrentDevice.current_latitude = obj.latitude
             CurrentDevice.current_longitude = obj.longitude
-        time.sleep(.1)
+        time.sleep(.5)
 
 
 def parseGPS(str):
