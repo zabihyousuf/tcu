@@ -1,9 +1,9 @@
 {
-    "name": "vue-electron-flask",
+    "name": "project-tame",
     "version": "1.0.1",
     "private": true,
-    "description": "Simple template for combining Electron with Vue3 and Flask",
-    "author": "Sanjay Soundarajan",
+    "description": "Tame your times",
+    "author": "Zabih Yousuf",
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
@@ -88,6 +88,6 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/megasanjay/electron-vue3-flask.git"
+        "url": "https://https://github.com/zabihyousuf/project-tame.git"
     }
 }

@@ -1,15 +1,12 @@
 from __future__ import print_function
 import math
 from sqlite3 import Timestamp
-from threading import currentThread
+from threading import Thread, currentThread
 from flask import Flask
-from calc import calc
 from flask_cors import CORS, cross_origin
 from flask_restx import Api, Resource, reqparse
-from datetime import time
 import logging
 from flask import Flask, jsonify, request
-import time
 from multiprocessing import Process, Value
 from flaskext.mysql import MySQL
 import pymysql
@@ -18,8 +15,8 @@ import sys
 from pathlib import Path
 import uuid
 from settings import *
-import serial
-import pynmea2
+# from gps import *
+import time
 from Device import DeviceObject, DeviceData
 from RaceTrack import RaceTrack
 from utils import *
@@ -31,8 +28,8 @@ db = pymysql.connect(**mainConfig)
 # device config api
 deviceID = 0
 # device_id, accound_holder_id, device_data, device_status
-CurrentDevice = DeviceObject(deviceID, "", "", "")
-CurrentRaceTrack = RaceTrack()
+CurrentDevice = DeviceObject(deviceID, "", "")
+CurrentRaceTrack = RaceTrack("", "", "", "")
 
 app = Flask(__name__)
 CORS(app)
@@ -44,8 +41,7 @@ api = Api(
     doc="/docs",
 )
 
-serialPort = serial.Serial(port, baudrate=9600, timeout=0.5)
-
+# gpsd = gps(mode=WATCH_ENABLE|WATCH_NEWSTYLE)
 
 @api.route("/api_version", endpoint="apiVersion")
 class ApiVersion(Resource):
@@ -89,9 +85,9 @@ class HelloWorld(Resource):
 
                 cursor.execute(sql, val)
                 response = "Server active!!"
-                CurrentDevice.device_id = deviceID
-                CurrentDevice.accound_holder_id = cursor.fetchone()[1]
-                CurrentDevice.device_status = "active"
+                # CurrentDevice.id = deviceID
+                # CurrentDevice.accound_holder_id = cursor.fetchone()[1]
+                # CurrentDevice.status = "active"
                 return response
             except Exception as e:
                 return jsonify({"error": f"An error occurred in the index method with exception ({e})"})
@@ -144,7 +140,8 @@ class Start(Resource):
     def get(self):
         try:
             recording_on = Value('b', True)
-            p = Process(target=Start_Recording_Data, args=(recording_on))
+            p = Thread(target=Start_Recording_Data, args=(recording_on))
+            p.daemon = True
             p.start()
             return "Recording started"
         except Exception as e:
@@ -157,11 +154,17 @@ class GetIfLapped(Resource):
         global CurrentDevice
         try:
 
-            Px = CurrentDevice.current_latitude
-            Py = CurrentDevice.current_longitude
+            # Px = CurrentDevice.current_latitude
+            # Py = CurrentDevice.current_longitude
 
-            Qx = CurrentRaceTrack.start_latitude
-            Qy = CurrentRaceTrack.start_longitude
+            # Qx = CurrentRaceTrack.start_latitude
+            # Qy = CurrentRaceTrack.start_longitude
+
+            Px = 38.5788172
+            Py = -77.3057
+
+            Qx =  38.5788172
+            Qy =  -77.3057
 
             if math.dist(Px, Py, Qx, Qy) < 5:
                 return jsonify({"lapped": true})
@@ -171,29 +174,28 @@ class GetIfLapped(Resource):
 
 
 def Start_Recording_Data(append_to_object):
-    global finaList, CurrentDevice, serialPort, CurrentRaceTrack
-    serialPort = serial.Serial(port, baudrate=9600, timeout=0.5)
-    while True:
-        str = serialPort.readline()
-        obj = parseGPS(str)
-        if CurrentDevice.device_status == "active" and CurrentDevice.track_found == False:
-            raceTrackMethod = findClosestTrack(obj, db)
+    try:
+        global  CurrentDevice,  CurrentRaceTrack
+        while True:
+            # report = gpsd.next()
+            # obj = parseGPSData(report)
 
-            if raceTrackMethod == "found":
-                CurrentRaceTrack = raceTrackMethod[1]
-                CurrentDevice.track_found = True
-                print("Track found")
-        if append_to_object.value == True:
-            CurrentDevice.addToObject(obj)
-            CurrentDevice.current_latitude = obj.latitude
-            CurrentDevice.current_longitude = obj.longitude
-        time.sleep(.5)
+            obj = DeviceData('',38.5788172,-77.3057,"","","","","")
+            if CurrentDevice.status == "active" and CurrentDevice.track_found == False:
+                raceTrackMethod = findClosestTrack(obj, db)
 
+                if raceTrackMethod == "found":
+                    CurrentRaceTrack = raceTrackMethod[1]
+                    CurrentDevice.track_found = True
+                    print("Track found")
+            # if append_to_object.value == True:
+            #     CurrentDevice.addToObject(obj)
+            #     CurrentDevice.current_latitude = obj.latitude
+            #     CurrentDevice.current_longitude = obj.longitude
+            time.sleep(.5)
+    except Exception as e:
+        print(e)
 
-def parseGPS(str):
-    if str.find('GGA') > 0:
-        msg = pynmea2.parse(str)
-        return DeviceData(timestamp, msg.lat, msg.lat_dir, msg.lon, msg.lon_dir, msg.altitude, msg.altitude_units, msg.num_sats)
 
 
 # 5000 is the flask default port. You can change it to something else if you want.

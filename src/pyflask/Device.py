@@ -2,50 +2,46 @@
 
 class DeviceObject:
 
-    def __init__(self, device_id, accound_holder_id, device_status):
-        self.device_id = device_id
+    def __init__(self, id, accound_holder_id, status):
+        self.id = id
         self.accound_holder_id = accound_holder_id
-        self.device_status = device_status
-        self.device_data = []
+        self.status = status
+        self.data = []
         self.track_found = False
         self.current_track = None
         self.current_latitude = None
         self.current_longitude = None
 
     def __str__(self):
-        return "DeviceData: {}, {}, {}, {}, {}".format(self.device_id, self.device_name, self.device_type, self.device_location, self.device_status)
+        return "DeviceData: {}, {}, {}, {}, {}".format(self.id, self.name, self.type, self.location, self.status)
 
     def __repr__(self):
         return self.__str__()
 
     def __eq__(self, other):
-        return self.device_id == other.device_id
+        return self.id == other.id
 
     def __ne__(self, other):
-        return self.device_id != other.device_id
+        return self.id != other.id
 
-    def addToObject(self, device_data):
-        self.device_data.append(device_data)
+    def addToObject(self, data):
+        self.data.append(data)
 
 
 class DeviceData:
 
-    def __init__(self, device_timestamp, device_latitude, device_latitude_dir, device_longitude, device_longitude_dir, device_altitude, altitude_units, num_sats, device_gyroscope,device_heading):
-        self.device_longitude = device_longitude
-        self.device_latitude = device_latitude
-        # self.device_speed = device_speed
-        # self.device_acceleration = device_acceleration
-        # self.device_heading = device_heading
-        self.device_altitude = device_altitude
-        # self.device_gyroscope = device_gyroscope
-        self.device_timestamp = device_timestamp
-        self.device_latitude_dir = device_latitude_dir
-        self.device_longitude_dir = device_longitude_dir
-        self.altitude_units = altitude_units
-        self.num_sats = num_sats
+    def __init__(self, timestamp, latitude, longitude, altitude, epv, ept, speed, climb):
+        self.timestamp = timestamp
+        self.latitude = latitude
+        self.longitude = longitude
+        self.altitude = altitude
+        self.epv = epv
+        self.ept = ept
+        self.speed = speed
+        self.climb = climb
 
     def __str__(self):
-        return "DeviceData: {}, {}, {}, {}, {}, {}, {}, {}".format(self.device_complete_data, self.device_longitude, self.device_latitude, self.device_speed, self.device_acceleration, self.device_heading, self.device_altitude, self.device_gyroscope)
+        return "DeviceData: {}, {}, {}, {}, {}, {}, {}, {}".format(self.timestamp, self.latitude, self.longitude, self.altitude, self.epv, self.ept, self.speed, self.climb)
 
     def __repr__(self):
         return self.__str__()
