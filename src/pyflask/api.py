@@ -143,7 +143,7 @@ def add_session():
             return jsonify({"error": ("An error occurred in the add_session method with exception (%s)", e)})
 
 
-@api.route("/find-track-start-data", endpoint="find-track-start-data")
+@api.route("/start", endpoint="start")
 class Start(Resource):
     def get(self):
         global CurrentDevice, CurrentRaceTrack
@@ -160,7 +160,10 @@ class Start(Resource):
                     
             p = Process(target=Start_Recording_Data, args=(recording_on,))
             p.start()
-            return jsonify({"track":CurrentRaceTrack.track_name, "lat":CurrentRaceTrack.start_latitude, "lon":CurrentRaceTrack.start_longitude})
+            if CurrentRaceTrack != None:
+                return jsonify({"track":CurrentRaceTrack.track_name, "lat":CurrentRaceTrack.start_latitude, "lon":CurrentRaceTrack.start_longitude})
+            else:
+                return jsonify({"error": "No track found"})
         except Exception as e:
             logging.error( {"error": f"An error occurred in the start method with exception ({e})"})
             return jsonify({"error": f"An error occurred in the start method with exception ({e})"})
@@ -169,26 +172,28 @@ class Start(Resource):
 @api.route("/GetIfLapped", endpoint="getIfLapped")
 class GetIfLapped(Resource):
     def get(self):
-        global CurrentDevice
+        global CurrentDevice, CurrentRaceTrack
         try:
+            if CurrentDevice is not None and CurrentRaceTrack is not None:
+                Px = CurrentDevice.current_latitude
+                Py = CurrentDevice.current_longitude
 
-            Px = CurrentDevice.current_latitude
-            Py = CurrentDevice.current_longitude
+                logging.error(
+                                {"testing": f"Value ({CurrentRaceTrack})"})
+                Qx = CurrentRaceTrack.start_latitude
+                Qy = CurrentRaceTrack.start_longitude
 
-            logging.error(
-                            {"testing": f"Value ({CurrentRaceTrack})"})
-            Qx = CurrentRaceTrack.start_latitude
-            Qy = CurrentRaceTrack.start_longitude
+                # Px = 38.5788172
+                # Py = -77.3057
 
-            # Px = 38.5788172
-            # Py = -77.3057
+                # Qx = 38.5788172
+                # Qy = -77.3057
 
-            # Qx = 38.5788172
-            # Qy = -77.3057
-
-            if math.dist([Px, Py], [Qx, Qy]) < 5:
-                return jsonify({"lapped": "true", 'currentRaceTrack': CurrentRaceTrack.track_name, "lat":CurrentRaceTrack.start_latitude, "lon":CurrentRaceTrack.start_longitude})
-            return jsonify({"lapped": "false", "lat":CurrentRaceTrack.start_latitude, "lon":CurrentRaceTrack.start_longitude})
+                if math.dist([Px, Py], [Qx, Qy]) < 5:
+                    return jsonify({"lapped": "true", 'currentRaceTrack': CurrentRaceTrack.track_name, "lat":CurrentRaceTrack.start_latitude, "lon":CurrentRaceTrack.start_longitude})
+                return jsonify({"lapped": "false", "lat":CurrentRaceTrack.start_latitude, "lon":CurrentRaceTrack.start_longitude})
+            else:
+                return jsonify({"lapped": "false"})
         except Exception as e:
             logging.error(
                 {"error": f"An error occurred in the GetIfLapped method with exception ({e})"})

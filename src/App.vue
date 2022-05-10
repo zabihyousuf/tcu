@@ -13,7 +13,6 @@ import axiosRetry from "axios-retry";
 const MIN_API_VERSION = "1.1.0";
 
 import TimerComponent from "./components/TimerComponent.vue";
-
 export default {
   name: "App",
   components: { TimerComponent },
@@ -45,7 +44,7 @@ export default {
             ) {
               console.log("API version satisfied");
               axios
-                .get(`${this.SERVERURL}/find-track-start-data`)
+                .get(`${this.SERVERURL}/start`)
                 .then((response) => {
                   console.log(response.data);
                 })

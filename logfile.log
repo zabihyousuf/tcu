@@ -88,3 +88,159 @@
 {'testing': 'Value (None)'}
 {'error': "An error occurred in the GetIfLapped method with exception ('NoneType' object has no attribute 'start_latitude')"}
 127.0.0.1 - - [10/May/2022 15:39:18] "GET /GetIfLapped HTTP/1.1" 200 -
+ * Detected change in 'D:\\project-tame\\dist_electron\\pyflask\\api.py', reloading
+ * Detected change in 'D:\\project-tame\\dist_electron\\pyflask\\api.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 255-048-501
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [10/May/2022 16:26:45] "GET /echo HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:26:45] "GET /api_version HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:26:45] "[33mGET /find-track-start-data HTTP/1.1[0m" 404 -
+127.0.0.1 - - [10/May/2022 16:26:45] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:26:45] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:26:46] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:26:47] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:26:47] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:26:47] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:26:48] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:26:48] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:26:49] "GET /GetIfLapped HTTP/1.1" 200 -
+ * Restarting with stat
+127.0.0.1 - - [10/May/2022 16:27:20] "GET /echo HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:20] "GET /api_version HTTP/1.1" 200 -
+{'error': 'An error occurred in the findClosestTrack method with exception (must be real number, not NoneType)'}
+{'error': 'An error occurred in the start method with exception (None)'}
+{'error': "An error occurred in the start method with exception ('NoneType' object has no attribute 'track_name')"}
+127.0.0.1 - - [10/May/2022 16:27:20] "GET /start HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:20] "GET /GetIfLapped HTTP/1.1" 200 -
+ * Debugger is active!
+ * Debugger PIN: 255-048-501
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+name 'gpsd' is not defined
+127.0.0.1 - - [10/May/2022 16:27:21] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:21] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:22] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:22] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:23] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:23] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:24] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:24] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:25] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:25] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:26] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:26] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:27] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:27] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:28] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:28] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:29] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:29] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:30] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:30] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:31] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:31] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:32] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:32] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:33] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:33] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:34] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:34] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:35] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:35] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:36] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:36] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:37] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:37] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:38] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:38] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:39] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:39] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:40] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:40] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:41] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:41] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:42] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:42] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:43] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:43] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:44] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:44] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:45] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:45] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:46] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:46] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:47] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:47] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:48] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:48] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:49] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:49] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:50] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:50] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:51] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:51] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:52] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:52] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:53] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:53] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:54] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:54] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:55] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:55] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:56] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:56] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:57] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:57] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:58] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:58] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:59] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:27:59] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:00] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:00] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:01] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:01] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:02] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:02] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:03] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:03] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:04] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:04] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:05] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:05] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:06] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:06] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:07] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:07] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:08] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:08] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:09] "GET /GetIfLapped HTTP/1.1" 200 -
+ * Detected change in 'D:\\project-tame\\dist_electron\\pyflask\\api.py', reloading
+ * Detected change in 'D:\\project-tame\\dist_electron\\pyflask\\api.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 255-048-501
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [10/May/2022 16:28:27] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:27] "GET /echo HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:27] "GET /api_version HTTP/1.1" 200 -
+{'error': 'An error occurred in the findClosestTrack method with exception (must be real number, not NoneType)'}
+{'error': 'An error occurred in the start method with exception (None)'}
+127.0.0.1 - - [10/May/2022 16:28:28] "GET /start HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:28] "GET /GetIfLapped HTTP/1.1" 200 -
+name 'gpsd' is not defined
+127.0.0.1 - - [10/May/2022 16:28:29] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:29] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:29] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:30] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:30] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:31] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:32] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:32] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:32] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:33] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:33] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:34] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:35] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:35] "GET /GetIfLapped HTTP/1.1" 200 -
+127.0.0.1 - - [10/May/2022 16:28:35] "GET /GetIfLapped HTTP/1.1" 200 -

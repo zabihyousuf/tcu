@@ -19,6 +19,7 @@ export default createStore({
         MIN_API_VERSION: "1.1.0",
         error: '',
         started: false,
+        trackFound: false,
     },
     getters: {
         get(state) {
