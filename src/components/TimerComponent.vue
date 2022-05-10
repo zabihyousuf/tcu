@@ -1,5 +1,9 @@
 <template style="background-color: rgb(10, 10, 10)">
-  <v-container id="bg">
+  <v-container
+    id="bg"
+    style="width: fit-content
+block-size: fit-content"
+  >
     <!-- top row -->
     <!-- <v-row>
       <v-row>
@@ -44,7 +48,7 @@
           <div id="clock">
             <v-row justify="center" class="mt-n9 mb-n12"
               ><div class="mb-n9">
-                <span id="app_text" style="font-size: 42px">Lap </span
+                <span id="app_text" style="font-size: 64px">Lap </span
                 ><span style="font-size: 9em">
                   <strong>{{ lapNumber }}</strong></span
                 >
@@ -55,33 +59,36 @@
             </div>
 
             <v-row class="mt-n9" justify="center">
-              <div class="mt-n9 mr-9">
+              <v-col cols="4">
+                <div class="mt-n9" style="text-align: center;">
                 <v-card-title
                   id="app_text"
-                  class="mt-9 mb-9"
-                  style="font-size: 42px"
+                  class="mb-n9"
+                  style="font-size: 80px"
                   >Fastest Lap</v-card-title
                 >
-                <v-card-text style="font-size: 54px"
+                <v-card-text style="font-size: 110px;"
                   ><strong>{{ fastestLap }}</strong></v-card-text
                 >
               </div>
-              <v-spacer></v-spacer>
-              <v-spacer></v-spacer>
-
-              <v-spacer></v-spacer>
-              <v-spacer></v-spacer>
-              <div class="mt-n9 ml-9">
+              </v-col>
+              
+              <v-col cols="4">
+              </v-col>
+              <v-col cols="4">
+                <div class="mt-n9" style="text-align: center;">
                 <v-card-title
                   id="app_text"
-                  class="mt-9 mb-9"
-                  style="font-size: 42px"
+                  class="mb-n9"
+                  style="font-size: 80px"
                   >Average Lap</v-card-title
                 >
-                <v-card-text style="font-size: 54px"
+                <v-card-text style="font-size: 110px"
                   ><strong>{{ averageLap }}</strong></v-card-text
                 >
               </div>
+              </v-col>
+              
             </v-row>
             <v-row justify="center">
               <v-spacer></v-spacer>
@@ -170,7 +177,6 @@ export default {
   methods: {
     seeIfSessionShouldStart() {
       if (!this.running) {
-
         this.$store.dispatch("getIfLapped");
         if (this.$store.state.lapped) {
           this.start();
@@ -195,7 +201,6 @@ export default {
       this.started = setInterval(this.clockRunning, 10);
       this.running = true;
       this.temp = setInterval(this.callEverySecond, 500);
-
     },
     stop() {
       this.running = false;
@@ -220,7 +225,7 @@ export default {
           avgLap: this.averageLap,
         });
         this.running = false;
-        this.laps= []
+        this.laps = [];
         clearInterval(this.started);
         clearInterval(this.getLapLocation);
         clearInterval(this.temp);
@@ -259,7 +264,6 @@ export default {
         this.zeroPrefix(sec, 2) +
         "." +
         this.zeroPrefix(ms, 3);
-
     },
     zeroPrefix(num, digit) {
       var zero = "";
@@ -301,12 +305,12 @@ export default {
 
       return minutes + ":" + seconds + "." + milliseconds;
     },
-    callEverySecond(){
+    callEverySecond() {
       this.$store.dispatch("getIfLapped");
-      if (this.$store.state.lapped === 'true' && this.running) {
+      if (this.$store.state.lapped === "true" && this.running) {
         this.lap();
       }
-    }
+    },
   },
   beforeUnmount() {
     clearInterval(this.started);
