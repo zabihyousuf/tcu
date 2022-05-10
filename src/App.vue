@@ -45,7 +45,7 @@ export default {
             ) {
               console.log("API version satisfied");
               axios
-                .get(`${this.SERVERURL}/start`)
+                .get(`${this.SERVERURL}/find-track-start-data`)
                 .then((response) => {
                   console.log(response.data);
                 })

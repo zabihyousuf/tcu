@@ -143,7 +143,7 @@ def add_session():
             return jsonify({"error": ("An error occurred in the add_session method with exception (%s)", e)})
 
 
-@api.route("/start", endpoint="start")
+@api.route("/find-track-start-data", endpoint="find-track-start-data")
 class Start(Resource):
     def get(self):
         global CurrentDevice, CurrentRaceTrack
@@ -160,7 +160,7 @@ class Start(Resource):
                     
             p = Process(target=Start_Recording_Data, args=(recording_on,))
             p.start()
-            return jsonify(CurrentRaceTrack.track_name)
+            return jsonify({"track":CurrentRaceTrack.track_name, "lat":CurrentRaceTrack.start_latitude, "lon":CurrentRaceTrack.start_longitude})
         except Exception as e:
             logging.error( {"error": f"An error occurred in the start method with exception ({e})"})
             return jsonify({"error": f"An error occurred in the start method with exception ({e})"})
@@ -187,8 +187,8 @@ class GetIfLapped(Resource):
             # Qy = -77.3057
 
             if math.dist([Px, Py], [Qx, Qy]) < 5:
-                return jsonify({"lapped": "true", 'currentRaceTrack': CurrentRaceTrack.track_name})
-            return jsonify({"lapped": "false"})
+                return jsonify({"lapped": "true", 'currentRaceTrack': CurrentRaceTrack.track_name, "lat":CurrentRaceTrack.start_latitude, "lon":CurrentRaceTrack.start_longitude})
+            return jsonify({"lapped": "false", "lat":CurrentRaceTrack.start_latitude, "lon":CurrentRaceTrack.start_longitude})
         except Exception as e:
             logging.error(
                 {"error": f"An error occurred in the GetIfLapped method with exception ({e})"})

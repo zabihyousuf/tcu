@@ -176,7 +176,7 @@ export default {
           this.start();
           // this.$forceUpdate();
         } else {
-          setTimeout(this.seeIfSessionShouldStart, 500);
+          setTimeout(this.seeIfSessionShouldStart, 1000);
         }
       }
     },
