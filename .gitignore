@@ -31,3 +31,5 @@ build
 src/pyflaskdist
 api.spec
 .env
+
+logfile.log

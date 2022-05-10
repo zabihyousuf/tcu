@@ -85,7 +85,7 @@
             </v-row>
             <v-row justify="center">
               <v-spacer></v-spacer>
-              <v-btn
+              <!-- <v-btn
                 x-large
                 style="font-size: 4em"
                 id="start"
@@ -106,7 +106,7 @@
                 class="white--text"
                 @click="lap()"
                 >Lap</v-btn
-              >
+              > -->
 
               <v-spacer v-if="running"></v-spacer>
               <v-btn
@@ -156,31 +156,27 @@ export default {
       timeElapsed: 0,
       getLapLocation: null,
       selectedTrack: "",
+      temp: null,
     };
   },
   computed: {
     getError() {
       return this.$store.state.error;
     },
-    getLapped() {
-      if (this.$store.state.lapped && this.running) {
-        this.lap();
-      }
-      return this.$store.state.lapped;
-    },
   },
-  mounted() {
+  created() {
     this.seeIfSessionShouldStart();
   },
   methods: {
     seeIfSessionShouldStart() {
       if (!this.running) {
 
-        // this.$store.dispatch("getIfLapped");
+        this.$store.dispatch("getIfLapped");
         if (this.$store.state.lapped) {
           this.start();
+          // this.$forceUpdate();
         } else {
-          setInterval(this.seeIfSessionShouldStart, 1000);
+          setTimeout(this.seeIfSessionShouldStart, 500);
         }
       }
     },
@@ -198,17 +194,15 @@ export default {
 
       this.started = setInterval(this.clockRunning, 10);
       this.running = true;
-      this.$store.commit("started", true);
+      this.temp = setInterval(this.callEverySecond, 500);
 
-      if (this.running === true) {
-        event.preventDefault();
-      }
     },
     stop() {
       this.running = false;
       this.timeStopped = new Date();
       clearInterval(this.started);
       clearInterval(this.getLapLocation);
+      clearInterval(this.temp);
     },
     reset(calledFrom) {
       if (calledFrom === "end") {
@@ -226,8 +220,10 @@ export default {
           avgLap: this.averageLap,
         });
         this.running = false;
+        this.laps= []
         clearInterval(this.started);
         clearInterval(this.getLapLocation);
+        clearInterval(this.temp);
 
         this.stoppedDuration = 0;
         this.timeBegan = null;
@@ -240,6 +236,7 @@ export default {
         this.running = false;
         clearInterval(this.started);
         clearInterval(this.getLapLocation);
+        clearInterval(this.temp);
 
         this.stoppedDuration = 0;
         this.timeBegan = null;
@@ -263,7 +260,6 @@ export default {
         "." +
         this.zeroPrefix(ms, 3);
 
-      this.$store.dispatch("getIfLapped");
     },
     zeroPrefix(num, digit) {
       var zero = "";
@@ -305,10 +301,17 @@ export default {
 
       return minutes + ":" + seconds + "." + milliseconds;
     },
+    callEverySecond(){
+      this.$store.dispatch("getIfLapped");
+      if (this.$store.state.lapped === 'true' && this.running) {
+        this.lap();
+      }
+    }
   },
   beforeUnmount() {
     clearInterval(this.started);
     clearInterval(this.getLapLocation);
+    clearInterval(this.temp);
   },
 };
 </script>

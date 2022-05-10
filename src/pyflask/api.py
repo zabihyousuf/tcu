@@ -1,13 +1,15 @@
 from __future__ import print_function
+from gettext import find
 import math
+from multiprocessing import Process
 from sqlite3 import Timestamp
-from threading import Thread, currentThread
+# from threading import Thread, currentThread
 from flask import Flask
 from flask_cors import CORS, cross_origin
 from flask_restx import Api, Resource, reqparse
 import logging
 from flask import Flask, jsonify, request
-from multiprocessing import Process, Value
+# from multiprocessing import Process, Value
 from flaskext.mysql import MySQL
 import pymysql
 import logging
@@ -20,6 +22,8 @@ import time
 from Device import DeviceObject, DeviceData
 from RaceTrack import RaceTrack
 from utils import *
+import logging
+
 
 # main db connection
 db = pymysql.connect(**mainConfig)
@@ -29,7 +33,7 @@ db = pymysql.connect(**mainConfig)
 deviceID = 0
 # device_id, accound_holder_id, device_data, device_status
 CurrentDevice = DeviceObject(deviceID, "", "")
-CurrentRaceTrack = RaceTrack("", "", "", "")
+CurrentRaceTrack = None
 
 app = Flask(__name__)
 CORS(app)
@@ -43,10 +47,11 @@ api = Api(
 
 # gpsd = gps(mode=WATCH_ENABLE|WATCH_NEWSTYLE)
 
+
 @api.route("/api_version", endpoint="apiVersion")
 class ApiVersion(Resource):
     def get(self):
-
+        logging.info(f'{API_VERSION} is the current version!')
         return API_VERSION
 
 
@@ -85,11 +90,13 @@ class HelloWorld(Resource):
 
                 cursor.execute(sql, val)
                 response = "Server active!!"
-                # CurrentDevice.id = deviceID
-                # CurrentDevice.accound_holder_id = cursor.fetchone()[1]
-                # CurrentDevice.status = "active"
+                CurrentDevice.setId(deviceID)
+                # CurrentDevice.setAccountHolderId(cursor.fetchone()[1])
+                CurrentDevice.setStatus('active')
                 return response
             except Exception as e:
+                logging.error(
+                    {"error": f"An error occurred in the echo method with exception ({e})"})
                 return jsonify({"error": f"An error occurred in the index method with exception ({e})"})
 
 
@@ -131,71 +138,109 @@ def add_session():
             results = cursor.fetchall()
             return jsonify(results)
         except Exception as e:
-            print(e)
+            logging.error(
+                {"error": f"An error occurred in the add_session method with exception ({e})"})
             return jsonify({"error": ("An error occurred in the add_session method with exception (%s)", e)})
 
 
 @api.route("/start", endpoint="start")
 class Start(Resource):
     def get(self):
+        global CurrentDevice, CurrentRaceTrack
         try:
-            recording_on = Value('b', True)
-            p = Thread(target=Start_Recording_Data, args=(recording_on))
-            p.daemon = True
+            recording_on = True
+            if CurrentDevice.status == "active":
+                raceTrackMethod = findClosestTrack(CurrentDevice)
+                logging.error({"error": f"An error occurred in the start method with exception ({raceTrackMethod})"})
+                if raceTrackMethod != None:
+                    CurrentRaceTrack = raceTrackMethod
+                    CurrentDevice.setTrackFound(True)
+                    CurrentDevice.setCurrentTrack(CurrentRaceTrack)
+    
+                    
+            p = Process(target=Start_Recording_Data, args=(recording_on,))
             p.start()
-            return "Recording started"
+            return jsonify(CurrentRaceTrack.track_name)
         except Exception as e:
+            logging.error( {"error": f"An error occurred in the start method with exception ({e})"})
             return jsonify({"error": f"An error occurred in the start method with exception ({e})"})
 
 
-@api.route("/getIfLapped", endpoint="getIfLapped")
+@api.route("/GetIfLapped", endpoint="getIfLapped")
 class GetIfLapped(Resource):
     def get(self):
         global CurrentDevice
         try:
 
-            # Px = CurrentDevice.current_latitude
-            # Py = CurrentDevice.current_longitude
+            Px = CurrentDevice.current_latitude
+            Py = CurrentDevice.current_longitude
 
-            # Qx = CurrentRaceTrack.start_latitude
-            # Qy = CurrentRaceTrack.start_longitude
+            logging.error(
+                            {"testing": f"Value ({CurrentRaceTrack})"})
+            Qx = CurrentRaceTrack.start_latitude
+            Qy = CurrentRaceTrack.start_longitude
 
-            Px = 38.5788172
-            Py = -77.3057
+            # Px = 38.5788172
+            # Py = -77.3057
 
-            Qx =  38.5788172
-            Qy =  -77.3057
+            # Qx = 38.5788172
+            # Qy = -77.3057
 
-            if math.dist(Px, Py, Qx, Qy) < 5:
-                return jsonify({"lapped": true})
-            return jsonify({"lapped": false})
+            if math.dist([Px, Py], [Qx, Qy]) < 5:
+                return jsonify({"lapped": "true", 'currentRaceTrack': CurrentRaceTrack.track_name})
+            return jsonify({"lapped": "false"})
         except Exception as e:
+            logging.error(
+                {"error": f"An error occurred in the GetIfLapped method with exception ({e})"})
             return jsonify({"error": f"An error occurred in the getIfLapped method with exception ({e})"})
 
 
 def Start_Recording_Data(append_to_object):
     try:
-        global  CurrentDevice,  CurrentRaceTrack
+        global CurrentDevice,  CurrentRaceTrack
         while True:
-            # report = gpsd.next()
-            # obj = parseGPSData(report)
-
-            obj = DeviceData('',38.5788172,-77.3057,"","","","","")
-            if CurrentDevice.status == "active" and CurrentDevice.track_found == False:
-                raceTrackMethod = findClosestTrack(obj, db)
-
-                if raceTrackMethod == "found":
-                    CurrentRaceTrack = raceTrackMethod[1]
-                    CurrentDevice.track_found = True
-                    print("Track found")
-            # if append_to_object.value == True:
-            #     CurrentDevice.addToObject(obj)
-            #     CurrentDevice.current_latitude = obj.latitude
-            #     CurrentDevice.current_longitude = obj.longitude
+            report = gpsd.next()
+            obj = parseGPSData(report)
+            logging.error("im recording data")
+            if append_to_object == True:
+                CurrentDevice.addToObject(obj)
+                CurrentDevice.current_latitude = obj.latitude
+                CurrentDevice.current_longitude = obj.longitude
             time.sleep(.5)
     except Exception as e:
+        logging.error(e)
         print(e)
 
+
+def findClosestTrack(device):
+    # Find the closest track to the device
+    # Get the tracks from the database
+    try:
+        cursor = db.cursor()
+        sql = "SELECT * FROM enable_ninja_local.tracks"
+        cursor.execute(sql)
+        tracks = cursor.fetchall()
+
+        # loop through the tracks and make a list of the track objects
+        track_list = []
+        for i in tracks:
+            track_list.append(RaceTrack(i[0], i[1], i[2], i[3]))
+
+        # find the closest track
+        allCloseTracks = []
+        for i in track_list:
+            print(i, file=sys.stderr)
+            calc = math.dist([CurrentDevice.current_latitude, CurrentDevice.current_longitude],
+                             [float(i.start_latitude), float(i.start_longitude)])
+            allCloseTracks.append({'track': i, 'distance': calc})
+        if len(allCloseTracks) == 0:
+            return None
+        else:
+            sorted(allCloseTracks, key=lambda d: d['distance'])
+            return allCloseTracks[-1]['track']
+    except Exception as e:
+        logging.error(
+            {"error": f"An error occurred in the findClosestTrack method with exception ({e})"})
 
 
 # 5000 is the flask default port. You can change it to something else if you want.

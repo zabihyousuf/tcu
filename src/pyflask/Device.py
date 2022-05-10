@@ -18,14 +18,32 @@ class DeviceObject:
     def __repr__(self):
         return self.__str__()
 
-    def __eq__(self, other):
-        return self.id == other.id
-
-    def __ne__(self, other):
-        return self.id != other.id
 
     def addToObject(self, data):
         self.data.append(data)
+    
+    def setId(self, id):
+        self.id = id
+    
+    def setAccountHolderId(self, accound_holder_id):
+        self.accound_holder_id = accound_holder_id
+    
+    def setStatus(self, status):
+        self.status = status
+    
+    def setTrackFound(self, track_found):
+        self.track_found = track_found
+    
+    def setCurrentTrack(self, current_track):
+        self.current_track = current_track
+    
+    def setCurrentLatitude(self, current_latitude):
+        self.current_latitude = current_latitude
+    
+    def setCurrentLongitude(self, current_longitude):
+        self.current_longitude = current_longitude
+    
+
 
 
 class DeviceData:

@@ -6,11 +6,8 @@ class RaceTrack:
         self.start_latitude = start_latitude
     
     def __str__(self):
-        return "RaceTrack: {}, {}, {}, {}".format(self.track_id, self.track_name, self.start_longitude, self.start_latitude)
+        return "RaceTrack: {}, {}, {}, {}".format(self.track_id, self.track_name, self.start_latitude, self.start_longitude)
     
     def __repr__(self):
         return self.__str__()
-    
-    def __eq__(self, other):
-        return self.track_id == other.track_id
     

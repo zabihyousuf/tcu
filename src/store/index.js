@@ -82,6 +82,8 @@ export default createStore({
                 .get(`${this.state.apiUrl}/GetIfLapped`)
                 .then((response) => {
                     commit('set', ['lapped', response.data.lapped]);
+                    commit('set', ['loading', false]);
+                    console.log(response);
                 })
                 .catch((error) => {
                     console.error(error);
