@@ -1,0 +1,24 @@
+{'testing': 'Value (None)'}
+{'error': "An error occurred in the GetIfLapped method with exception ('NoneType' object has no attribute 'start_latitude')"}
+127.0.0.1 - - [10/May/2022 15:38:49] "GET /GetIfLapped HTTP/1.1" 200 -
+{'testing': 'Value (None)'}
+{'error': "An error occurred in the GetIfLapped method with exception ('NoneType' object has no attribute 'start_latitude')"}
+127.0.0.1 - - [10/May/2022 15:38:49] "GET /GetIfLapped HTTP/1.1" 200 -
+{'testing': 'Value (None)'}
+{'error': "An error occurred in the GetIfLapped method with exception ('NoneType' object has no attribute 'start_latitude')"}
+127.0.0.1 - - [10/May/2022 15:38:51] "GET /GetIfLapped HTTP/1.1" 200 -
+{'testing': 'Value (None)'}
+{'error': "An error occurred in the GetIfLapped method with exception ('NoneType' object has no attribute 'start_latitude')"}
+127.0.0.1 - - [10/May/2022 15:38:51] "GET /GetIfLapped HTTP/1.1" 200 -
+{'testing': 'Value (None)'}
+{'error': "An error occurred in the GetIfLapped method with exception ('NoneType' object has no attribute 'start_latitude')"}
+127.0.0.1 - - [10/May/2022 15:38:53] "GET /GetIfLapped HTTP/1.1" 200 -
+{'testing': 'Value (None)'}
+{'error': "An error occurred in the GetIfLapped method with exception ('NoneType' object has no attribute 'start_latitude')"}
+127.0.0.1 - - [10/May/2022 15:38:53] "GET /GetIfLapped HTTP/1.1" 200 -
+{'testing': 'Value (None)'}
+{'error': "An error occurred in the GetIfLapped method with exception ('NoneType' object has no attribute 'start_latitude')"}
+127.0.0.1 - - [10/May/2022 15:38:55] "GET /GetIfLapped HTTP/1.1" 200 -
+{'testing': 'Value (None)'}
+{'error': "An error occurred in the GetIfLapped method with exception ('NoneType' object has no attribute 'start_latitude')"}
+127.0.0.1 - - [10/May/2022 15:38:55] "GET /GetIfLapped HTTP/1.1" 200 -
