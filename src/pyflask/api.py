@@ -201,7 +201,7 @@ def Start_Recording_Data(append_to_object):
         while True:
             report = gpsd.next()
             obj = parseGPSData(report)
-            logging.error("im recording data")
+            logging.error(f"im recording data---{obj}")
             if append_to_object == True:
                 CurrentDevice.addToObject(obj)
                 CurrentDevice.current_latitude = obj.latitude
