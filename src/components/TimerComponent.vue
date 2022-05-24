@@ -177,7 +177,7 @@ export default {
   methods: {
     seeIfSessionShouldStart() {
       if (!this.running) {
-        this.$store.dispatch("getIfLapped");
+        // this.$store.dispatch("getIfLapped");
         if (this.$store.state.lapped) {
           this.start();
           // this.$forceUpdate();

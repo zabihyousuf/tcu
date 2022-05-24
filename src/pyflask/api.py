@@ -11,19 +11,31 @@ import logging
 from flask import Flask, jsonify, request
 # from multiprocessing import Process, Value
 from flaskext.mysql import MySQL
+from itsdangerous import json
 import pymysql
-import logging
 import sys
 from pathlib import Path
 import uuid
 from settings import *
-# from gps import *
+from gps import *
 import time
 from Device import DeviceObject, DeviceData
 from RaceTrack import RaceTrack
 from utils import *
 import logging
+import sys
 
+logformat = "%(asctime)s %(levelname)s %(module)s - %(funcName)s: %(message)s"
+datefmt = "%m-%d %H:%M"
+
+logging.basicConfig(filename="app.log", level=logging.INFO, filemode="w",
+                    format=logformat, datefmt=datefmt)
+
+stream_handler = logging.StreamHandler(sys.stderr)
+stream_handler.setFormatter(logging.Formatter(fmt=logformat, datefmt=datefmt))
+
+logger = logging.getLogger("app")
+logger.addHandler(stream_handler)
 
 # main db connection
 db = pymysql.connect(**mainConfig)
@@ -45,13 +57,14 @@ api = Api(
     doc="/docs",
 )
 
-# gpsd = gps(mode=WATCH_ENABLE|WATCH_NEWSTYLE)
+gpsd = gps(mode=WATCH_ENABLE|WATCH_NEWSTYLE)
 
 
 @api.route("/api_version", endpoint="apiVersion")
 class ApiVersion(Resource):
+    global logger
     def get(self):
-        logging.info(f'{API_VERSION} is the current version!')
+        logger.info(f'{API_VERSION} is the current version!')
         return API_VERSION
 
 
@@ -60,7 +73,7 @@ class HelloWorld(Resource):
     @api.response(200, "Success")
     @api.response(400, "Validation Error")
     def get(self):
-        global deviceID
+        global deviceID, logger
         if request.method == 'GET':
             try:
                 # this is for the first time load only to create the file
@@ -95,7 +108,7 @@ class HelloWorld(Resource):
                 CurrentDevice.setStatus('active')
                 return response
             except Exception as e:
-                logging.error(
+                logger.error(
                     {"error": f"An error occurred in the echo method with exception ({e})"})
                 return jsonify({"error": f"An error occurred in the index method with exception ({e})"})
 
@@ -111,6 +124,7 @@ def add_session():
     :return:
         either a json object with the session id or an error message
     """
+    global logger
     if request.method == 'POST':
         try:
             results = []
@@ -138,20 +152,21 @@ def add_session():
             results = cursor.fetchall()
             return jsonify(results)
         except Exception as e:
-            logging.error(
+            logger.error(
                 {"error": f"An error occurred in the add_session method with exception ({e})"})
             return jsonify({"error": ("An error occurred in the add_session method with exception (%s)", e)})
 
 
 @api.route("/start", endpoint="start")
 class Start(Resource):
+    global logger
     def get(self):
         global CurrentDevice, CurrentRaceTrack
         try:
             recording_on = True
             if CurrentDevice.status == "active":
                 raceTrackMethod = findClosestTrack(CurrentDevice)
-                logging.error({"error": f"An error occurred in the start method with exception ({raceTrackMethod})"})
+                # logger.error({"error": f"An error occurred in the start method with exception ({raceTrackMethod})"})
                 if raceTrackMethod != None:
                     CurrentRaceTrack = raceTrackMethod
                     CurrentDevice.setTrackFound(True)
@@ -165,12 +180,13 @@ class Start(Resource):
             else:
                 return jsonify({"error": "No track found"})
         except Exception as e:
-            logging.error( {"error": f"An error occurred in the start method with exception ({e})"})
+            logger.error( {"error": f"An error occurred in the start method with exception ({e})"})
             return jsonify({"error": f"An error occurred in the start method with exception ({e})"})
 
 
 @api.route("/GetIfLapped", endpoint="getIfLapped")
 class GetIfLapped(Resource):
+    global logger
     def get(self):
         global CurrentDevice, CurrentRaceTrack
         try:
@@ -178,7 +194,7 @@ class GetIfLapped(Resource):
                 Px = CurrentDevice.current_latitude
                 Py = CurrentDevice.current_longitude
 
-                logging.error(
+                logger.error(
                                 {"testing": f"Value ({CurrentRaceTrack})"})
                 Qx = CurrentRaceTrack.start_latitude
                 Qy = CurrentRaceTrack.start_longitude
@@ -190,36 +206,40 @@ class GetIfLapped(Resource):
                 # Qy = -77.3057
 
                 if math.dist([Px, Py], [Qx, Qy]) < 5:
+                    # return jsonify({'it works'})
                     return jsonify({"lapped": "true", 'currentRaceTrack': CurrentRaceTrack.track_name, "lat":CurrentRaceTrack.start_latitude, "lon":CurrentRaceTrack.start_longitude})
                 return jsonify({"lapped": "false", "lat":CurrentRaceTrack.start_latitude, "lon":CurrentRaceTrack.start_longitude})
+                # return jsonify({'it doesnt work'})
             else:
                 return jsonify({"lapped": "false"})
         except Exception as e:
-            logging.error(
+            logger.error(
                 {"error": f"An error occurred in the GetIfLapped method with exception ({e})"})
             return jsonify({"error": f"An error occurred in the getIfLapped method with exception ({e})"})
 
 
 def Start_Recording_Data(append_to_object):
+    global logger, gpsd
     try:
         global CurrentDevice,  CurrentRaceTrack
         while True:
             report = gpsd.next()
             obj = parseGPSData(report)
-            logging.error(f"im recording data---{obj}")
+            logger.error(f"im recording data---{obj}")
             if append_to_object == True:
                 CurrentDevice.addToObject(obj)
                 CurrentDevice.current_latitude = obj.latitude
                 CurrentDevice.current_longitude = obj.longitude
             time.sleep(.5)
     except Exception as e:
-        logging.error(e)
+        logger.error(e)
         print(e)
 
 
 def findClosestTrack(device):
     # Find the closest track to the device
     # Get the tracks from the database
+    global logger, CurrentDevice, CurrentRaceTrack
     try:
         cursor = db.cursor()
         sql = "SELECT * FROM enable_ninja_local.tracks"
@@ -234,8 +254,8 @@ def findClosestTrack(device):
         # find the closest track
         allCloseTracks = []
         for i in track_list:
-            print(i, file=sys.stderr)
-            calc = math.dist([CurrentDevice.current_latitude, CurrentDevice.current_longitude],
+            # print(i, file=sys.stderr)
+            calc = math.dist([CurrentDevice.start_latitude, CurrentDevice.start_longitude],
                              [float(i.start_latitude), float(i.start_longitude)])
             allCloseTracks.append({'track': i, 'distance': calc})
         if len(allCloseTracks) == 0:
@@ -244,7 +264,7 @@ def findClosestTrack(device):
             sorted(allCloseTracks, key=lambda d: d['distance'])
             return allCloseTracks[-1]['track']
     except Exception as e:
-        logging.error(
+        logger.error(
             {"error": f"An error occurred in the findClosestTrack method with exception ({e})"})
 
 

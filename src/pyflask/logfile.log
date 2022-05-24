@@ -1,0 +1,29 @@
+ * Running on http://127.0.0.1:6000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 110-871-794
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 110-871-794
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 110-871-794
+127.0.0.1 - - [24/May/2022 17:06:21] "GET /echo HTTP/1.1" 200 -
+127.0.0.1 - - [24/May/2022 17:06:21] "GET /api_version HTTP/1.1" 200 -
+{'error': 'An error occurred in the findClosestTrack method with exception (must be real number, not NoneType)'}
+127.0.0.1 - - [24/May/2022 17:06:22] "GET /start HTTP/1.1" 200 -
+ * Detected change in '/Users/zabih/Documents/tcu/src/pyflask/api.py', reloading
+127.0.0.1 - - [24/May/2022 17:12:17] "GET /echo HTTP/1.1" 200 -
+127.0.0.1 - - [24/May/2022 17:12:17] "GET /api_version HTTP/1.1" 200 -
+{'error': 'An error occurred in the findClosestTrack method with exception (must be real number, not NoneType)'}
+127.0.0.1 - - [24/May/2022 17:12:17] "GET /start HTTP/1.1" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 110-871-794
+127.0.0.1 - - [24/May/2022 17:12:56] "GET /echo HTTP/1.1" 200 -
+127.0.0.1 - - [24/May/2022 17:12:56] "GET /api_version HTTP/1.1" 200 -
+127.0.0.1 - - [24/May/2022 17:12:56] "GET /start HTTP/1.1" 200 -
+ * Detected change in '/Users/zabih/Documents/tcu/src/pyflask/api.py', reloading
