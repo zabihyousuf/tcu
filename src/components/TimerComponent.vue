@@ -1,137 +1,66 @@
 <template style="background-color: rgb(10, 10, 10)">
-  <v-container
-    id="bg"
-    style="width: fit-content;
-block-size: fit-content"
-  >
-    <!-- top row -->
-    <!-- <v-row>
-      <v-row>
-        <v-col justify="left" cols="4"
-          ><v-btn
-            class="ml-14 mt-14"
-            x-large
-            icon
-            @click="$router.replace('/')"
-          >
-            <v-icon color="white">mdi-arrow-left</v-icon>
-            <v-card-title class="ml-n3" style="color: white">Back</v-card-title>
-          </v-btn></v-col
-        >
-        <v-col cols="4" justify="center" class="mb-n14" v-if="this.getError"
-          ><v-alert
-            outlined
-            type="error"
-            prominent
-            border="left"
-            class="mt-9 mb-n9"
-          >
-            {{ getError }}
-          </v-alert></v-col
-        ><v-col cols="4" justify="center" class="mb-n14" v-else
-          ><v-alert
-            outlined
-            type="success"
-            prominent
-            border="left"
-            class="mt-9 mb-n9"
-          >
-            Connection to server is OK
-          </v-alert></v-col
-        >
-      </v-row>
-      
-    </v-row> -->
-    <v-row justify="center">
-      <v-col cols="12">
-        <v-container class="ml-15 mt-15" fill-height fluid id="bg">
-          <div id="clock">
-            <v-row justify="center" class="mt-n9 mb-n12"
-              ><div class="mb-n9">
-                <span id="app_text" style="font-size: 64px">Lap </span
-                ><span style="font-size: 9em">
-                  <strong>{{ lapNumber }}</strong></span
-                >
-              </div></v-row
-            >
-            <div class="mt-n9">
-              <span class="time mb-n9">{{ time }}</span>
+  <v-container fluid fill-height fill-width class="ml-6 mr-6 mt-5" id="bg">
+    <div id="clock">
+      <v-row style="margin-right: 10%">
+        <v-col cols="12">
+          <div class="mb-n9" align="center">
+            <div id="app_text" style="font-size: 4vw">
+              Lap <strong style="font-size: 8vw">{{ lapNumber }}</strong>
             </div>
+          </div>
+        </v-col>
+      </v-row>
 
-            <v-row class="mt-n9" justify="center">
-              <v-col cols="4">
-                <div class="mt-n9" style="text-align: center;">
-                <v-card-title
-                  id="app_text"
-                  class="mb-n9"
-                  style="font-size: 80px"
-                  >Fastest Lap</v-card-title
-                >
-                <v-card-text style="font-size: 110px;"
-                  ><strong>{{ fastestLap }}</strong></v-card-text
-                >
-              </div>
-              </v-col>
-              
-              <v-col cols="4">
-              </v-col>
-              <v-col cols="4">
-                <div class="mt-n9" style="text-align: center;">
-                <v-card-title
-                  id="app_text"
-                  class="mb-n9"
-                  style="font-size: 80px"
-                  >Average Lap</v-card-title
-                >
-                <v-card-text style="font-size: 110px"
-                  ><strong>{{ averageLap }}</strong></v-card-text
-                >
-              </div>
-              </v-col>
-              
-            </v-row>
-            <v-row justify="center">
-              <v-spacer></v-spacer>
-              <!-- <v-btn
-                x-large
-                style="font-size: 4em"
-                id="start"
-                text
-                color="success"
-                class="white--text"
-                @click="start()"
-                >Start Session</v-btn
-              >
-              <v-spacer></v-spacer>
-              <v-btn
-                light
-                x-large
-                style="font-size: 4em"
-                v-if="running"
-                id="stop"
-                text
-                class="white--text"
-                @click="lap()"
-                >Lap</v-btn
-              > -->
+      <v-row style="margin-right: 10%" class="mb-n9">
+        <v-col>
+          <div class="mt-n9">
+            <span class="time mb-n9">{{ time }}</span>
+          </div>
+        </v-col>
+      </v-row>
 
-              <v-spacer v-if="running"></v-spacer>
-              <v-btn
-                v-if="running"
-                x-large
-                style="font-size: 4em"
-                id="reset"
-                color="error"
-                text
-                class="white--text"
-                @click="reset('end')"
-                >End Session</v-btn
-              >
-              <v-spacer v-if="running"></v-spacer>
-            </v-row>
-          </div> </v-container
-      ></v-col>
-    </v-row>
+      <v-row style="margin-right: 2%">
+        <v-col cols="4">
+          <div class="mt-n13" style="text-align: center">
+            <v-card-title id="app_text" class="mb-n5" style="font-size: 3vw"
+              >Fastest Lap</v-card-title
+            >
+            <v-card-text style="font-size: 6vw"
+              ><strong>{{ fastestLap }}</strong></v-card-text
+            >
+          </div>
+        </v-col>
+        <v-col cols="4"> </v-col>
+        <v-col cols="4">
+          <div class="mt-n13" style="text-align: center">
+            <v-card-title id="app_text" class="mb-n5" style="font-size: 3vw"
+              >Average Lap</v-card-title
+            >
+            <v-card-text style="font-size: 6vw"
+              ><strong>{{ averageLap }}</strong></v-card-text
+            >
+          </div>
+        </v-col>
+      </v-row>
+      <!-- <v-row justify="center">
+        <v-spacer></v-spacer>
+
+        <v-spacer v-if="running"></v-spacer>
+        <v-btn
+          v-if="running"
+          x-large
+          style="font-size: 4em"
+          id="reset"
+          color="error"
+          text
+          class="white--text"
+          @click="reset('end')"
+          >End Session</v-btn
+        >
+        <v-spacer v-if="running"></v-spacer>
+      </v-row> -->
+    </div>
+    Î
   </v-container>
 </template>
 
@@ -177,7 +106,7 @@ export default {
   methods: {
     seeIfSessionShouldStart() {
       if (!this.running) {
-        this.$store.dispatch("getIfLapped");
+        // this.$store.dispatch("getIfLapped");
         if (this.$store.state.lapped) {
           this.start();
           // this.$forceUpdate();
