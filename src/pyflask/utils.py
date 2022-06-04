@@ -5,13 +5,6 @@ import math
 import pymysql
 from settings import *
 
-logger = logging.getLogger()
-handler = logging.FileHandler('logfile.log')
-logger.addHandler(handler)
-
-
-
-
 def parseGPSData(report):
     ret = DeviceData(
         getattr(report,'time',''), 

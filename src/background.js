@@ -85,9 +85,12 @@ async function createWindow() {
   );
 
   // Create the browser window.
+  const electron = require('electron')
+
+  const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
   win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: width,
+    height: height,
     webPreferences: {
       // Use pluginOptions.nodeIntegration, leave this alone for recommended security.
       // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
@@ -95,8 +98,12 @@ async function createWindow() {
       // contextIsolation: !process.env.ELECTRON_NODE_INTEGRATION,
       // enableRemoteModule: true,
       preload: path.join(__dirname, "preload.js"),
+      devTools: false,
+      
     },
   });
+  win.maximize();
+  win.show();
 
   // Used to enable to remote modulue in renderer. 
   // enableWebContents(win.webContents);

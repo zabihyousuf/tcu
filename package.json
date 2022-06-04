@@ -11,12 +11,13 @@
         "electron:build": "vue-cli-service electron:build",
         "electron:build-preclean": "node ./scripts/prebuild.js",
         "electron:build-release": "vue-cli-service electron:build -p always",
-        "electron:serve": "yarn electron:serve-precopy && vue-cli-service electron:serve",
+        "electron:serve": "npm run electron:serve-precopy && vue-cli-service electron:serve",
         "electron:serve-precopy": "copyfiles -u 1 ./src/pyflask/** ./dist_electron",
         "postinstall": "electron-builder install-app-deps",
         "postuninstall": "electron-builder install-app-deps",
         "python:build": "python -m PyInstaller --onefile --clean ./src/pyflask/api.py --distpath ./src/pyflaskdist",
-        "python:dev": "python ./src/pyflask/api.py"
+        "python:dev": "python ./src/pyflask/api.py",
+        "fix":  "electron-builder --dir --armv7l --linux deb"
     },
     "main": "background.js",
     "dependencies": {
@@ -89,6 +90,6 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://https://github.com/zabihyousuf/project-tame.git"
+        "url": "https://https://github.com/zabihyousuf/tcu.git"
     }
 }

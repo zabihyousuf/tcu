@@ -1,7 +1,7 @@
 <template style="background-color: rgb(10, 10, 10)">
   <v-container
     id="bg"
-    style="width: fit-content
+    style="width: fit-content;
 block-size: fit-content"
   >
     <!-- top row -->
@@ -177,7 +177,7 @@ export default {
   methods: {
     seeIfSessionShouldStart() {
       if (!this.running) {
-        // this.$store.dispatch("getIfLapped");
+        this.$store.dispatch("getIfLapped");
         if (this.$store.state.lapped) {
           this.start();
           // this.$forceUpdate();
@@ -200,7 +200,7 @@ export default {
 
       this.started = setInterval(this.clockRunning, 10);
       this.running = true;
-      this.temp = setInterval(this.callEverySecond, 500);
+      this.temp = setInterval(this.callEverySecond, 31);
     },
     stop() {
       this.running = false;

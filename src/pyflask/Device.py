@@ -13,7 +13,7 @@ class DeviceObject:
         self.current_longitude = None
 
     def __str__(self):
-        return "DeviceData: {}, {}, {}, {}, {}".format(self.id, self.name, self.type, self.location, self.status)
+        return "DeviceData: {}, {}, {}, {}, {},{}".format(self.id, self.name, self.type, self.location, self.status,self.data)
 
     def __repr__(self):
         return self.__str__()
@@ -63,3 +63,6 @@ class DeviceData:
 
     def __repr__(self):
         return self.__str__()
+    
+    def printObject(self):
+        return "{}, {}, {}, {}, {}, {}, {}, {}".format(self.timestamp, self.latitude, self.longitude, self.altitude, self.epv, self.ept, self.speed, self.climb)

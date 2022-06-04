@@ -124,7 +124,7 @@ def add_session():
     :return:
         either a json object with the session id or an error message
     """
-    global logger
+    global logger, CurrentDevice
     if request.method == 'POST':
         try:
             results = []
@@ -149,6 +149,10 @@ def add_session():
                         "INSERT INTO `enable_ninja_local`.lap (track_session_id, lap_number, lap_time, lap_time_diff) VALUES (%s, %s, %s, %s)",
                         (int(seshID), j['lap'], j['time'], j['timeDiff']))
                     db.commit()
+            
+            with open("session_data.txt", "a") as file1:
+                # Writing data to a file
+                file1.write("End Entry \n")
             results = cursor.fetchall()
             return jsonify(results)
         except Exception as e:
@@ -173,8 +177,8 @@ class Start(Resource):
                     CurrentDevice.setCurrentTrack(CurrentRaceTrack)
     
                     
-            p = Process(target=Start_Recording_Data, args=(recording_on,))
-            p.start()
+            # p = Process(target=Start_Recording_Data, args=(recording_on,))
+            # p.start()
             if CurrentRaceTrack != None:
                 return jsonify({"track":CurrentRaceTrack.track_name, "lat":CurrentRaceTrack.start_latitude, "lon":CurrentRaceTrack.start_longitude})
             else:
@@ -188,27 +192,38 @@ class Start(Resource):
 class GetIfLapped(Resource):
     global logger
     def get(self):
-        global CurrentDevice, CurrentRaceTrack
+        global CurrentDevice, CurrentRaceTrack, gpsd
         try:
             if CurrentDevice is not None and CurrentRaceTrack is not None:
-                Px = CurrentDevice.current_latitude
-                Py = CurrentDevice.current_longitude
+                report = gpsd.next()
+                obj = parseGPSData(report)
+                logger.info(f"im recording data---{obj}")
+                CurrentDevice.addToObject(obj)
+                CurrentDevice.current_latitude = obj.latitude
+                CurrentDevice.current_longitude = obj.longitude
+                # print(type(obj.latitude)
+                if obj.latitude != 0.0:
+                    with open("session_data.txt", "a") as file1:
+                        # Writing data to a file
+                        file1.write(obj.printObject() + "\n")
+                Px = float(CurrentDevice.current_latitude)
+                Py = float(CurrentDevice.current_longitude)
 
-                logger.error(
+                logger.info(
                                 {"testing": f"Value ({CurrentRaceTrack})"})
-                Qx = CurrentRaceTrack.start_latitude
-                Qy = CurrentRaceTrack.start_longitude
+                Qx = float(CurrentRaceTrack.start_latitude)
+                Qy = float(CurrentRaceTrack.start_longitude)
 
                 # Px = 38.5788172
                 # Py = -77.3057
 
                 # Qx = 38.5788172
                 # Qy = -77.3057
-
-                if math.dist([Px, Py], [Qx, Qy]) < 5:
+                distVal = math.dist([Px, Py], [Qx, Qy])
+                if distVal < 5:
                     # return jsonify({'it works'})
-                    return jsonify({"lapped": "true", 'currentRaceTrack': CurrentRaceTrack.track_name, "lat":CurrentRaceTrack.start_latitude, "lon":CurrentRaceTrack.start_longitude})
-                return jsonify({"lapped": "false", "lat":CurrentRaceTrack.start_latitude, "lon":CurrentRaceTrack.start_longitude})
+                    return jsonify({"lapped": "true", 'currentRaceTrack': CurrentRaceTrack.track_name, "lat":CurrentRaceTrack.start_latitude, "lon":CurrentRaceTrack.start_longitude,  'distance':distVal})
+                return jsonify({"lapped": "false", "race_track_lat":CurrentRaceTrack.start_latitude, "race_track_lon":CurrentRaceTrack.start_longitude,  'distance':distVal, 'device_lat':Px, 'device_lon':Py})
                 # return jsonify({'it doesnt work'})
             else:
                 return jsonify({"lapped": "false"})
@@ -225,12 +240,12 @@ def Start_Recording_Data(append_to_object):
         while True:
             report = gpsd.next()
             obj = parseGPSData(report)
-            logger.error(f"im recording data---{obj}")
+            logger.info(f"im recording data---{obj}")
             if append_to_object == True:
                 CurrentDevice.addToObject(obj)
                 CurrentDevice.current_latitude = obj.latitude
                 CurrentDevice.current_longitude = obj.longitude
-            time.sleep(.5)
+            time.sleep(1)
     except Exception as e:
         logger.error(e)
         print(e)
@@ -239,8 +254,13 @@ def Start_Recording_Data(append_to_object):
 def findClosestTrack(device):
     # Find the closest track to the device
     # Get the tracks from the database
-    global logger, CurrentDevice, CurrentRaceTrack
+    global logger, CurrentDevice, CurrentRaceTrack, gpsd
     try:
+        report = gpsd.next()
+        obj = parseGPSData(report)
+        CurrentDevice.current_latitude = obj.latitude
+        CurrentDevice.current_longitude = obj.longitude
+        
         cursor = db.cursor()
         sql = "SELECT * FROM enable_ninja_local.tracks"
         cursor.execute(sql)
@@ -255,7 +275,7 @@ def findClosestTrack(device):
         allCloseTracks = []
         for i in track_list:
             # print(i, file=sys.stderr)
-            calc = math.dist([CurrentDevice.start_latitude, CurrentDevice.start_longitude],
+            calc = math.dist([CurrentDevice.current_latitude, CurrentDevice.current_longitude],
                              [float(i.start_latitude), float(i.start_longitude)])
             allCloseTracks.append({'track': i, 'distance': calc})
         if len(allCloseTracks) == 0:
