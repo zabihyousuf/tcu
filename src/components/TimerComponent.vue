@@ -3,7 +3,7 @@
     <div id="clock">
       <v-row style="margin-right: 10%">
         <v-col cols="12">
-          <div class="mb-n9" align="center">
+          <div class="mb-n6" align="center">
             <div id="app_text" style="font-size: 4vw">
               Lap <strong style="font-size: 8vw">{{ lapNumber }}</strong>
             </div>
@@ -11,35 +11,48 @@
         </v-col>
       </v-row>
 
-      <v-row style="margin-right: 10%" class="mb-n9">
+      <v-row style="margin-right: 10%; " class="mt-5 mb-n9">
         <v-col>
-          <div class="mt-n9">
+          <div class="mt-n5">
             <span class="time mb-n9">{{ time }}</span>
           </div>
         </v-col>
       </v-row>
 
-      <v-row style="margin-right: 2%">
-        <v-col cols="4">
-          <div class="mt-n13" style="text-align: center">
-            <v-card-title id="app_text" class="mb-n5" style="font-size: 3vw"
+      <v-row class="mt-12" style="margin-right: 4%">
+        <v-col cols="6" class="mt-n9" style="text-align: center">
+        <v-row justify="center">
+            <v-col cols="12">
+              <v-card-title id="app_text" class=" mb-n5" style="font-size: 4vw"
               >Fastest Lap</v-card-title
             >
-            <v-card-text style="font-size: 6vw"
+            </v-col>
+            
+          </v-row>
+          <v-row>
+            <v-col>
+              <v-card-text style="font-size: 8vw"
               ><strong>{{ fastestLap }}</strong></v-card-text
             >
-          </div>
+            </v-col>
+          </v-row>
         </v-col>
-        <v-col cols="4"> </v-col>
-        <v-col cols="4">
-          <div class="mt-n13" style="text-align: center">
-            <v-card-title id="app_text" class="mb-n5" style="font-size: 3vw"
+        <v-col  cols="6" class="mt-n9" style="text-align: center">
+          <v-row justify="center">
+            <v-col cols="12">
+              <v-card-title id="app_text" class="mb-n5" style="font-size: 4vw"
               >Average Lap</v-card-title
             >
-            <v-card-text style="font-size: 6vw"
-              ><strong>{{ averageLap }}</strong></v-card-text
-            >
-          </div>
+            </v-col>
+            
+          </v-row>
+          <v-row>
+            <v-col>
+              <v-card-text style="font-size: 8vw;"
+                ><strong style="">{{ averageLap }}</strong></v-card-text
+              >
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
       <!-- <v-row justify="center">
@@ -106,7 +119,7 @@ export default {
   methods: {
     seeIfSessionShouldStart() {
       if (!this.running) {
-        // this.$store.dispatch("getIfLapped");
+        this.$store.dispatch("getIfLapped");
         if (this.$store.state.lapped) {
           this.start();
           // this.$forceUpdate();
@@ -129,7 +142,7 @@ export default {
 
       this.started = setInterval(this.clockRunning, 10);
       this.running = true;
-      this.temp = setInterval(this.callEverySecond, 31);
+      this.temp = setInterval(this.callEverySecond, 250);
     },
     stop() {
       this.running = false;

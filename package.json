@@ -3,7 +3,8 @@
     "version": "1.0.1",
     "private": true,
     "description": "Tame your times",
-    "author": "Zabih Yousuf",
+    "author": "Zabih Yousuf <zabih.yousuf@gmail.com>",
+    "homepage":"https://https://github.com/zabihyousuf/tcu.git",
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
@@ -17,7 +18,7 @@
         "postuninstall": "electron-builder install-app-deps",
         "python:build": "python -m PyInstaller --onefile --clean ./src/pyflask/api.py --distpath ./src/pyflaskdist",
         "python:dev": "python ./src/pyflask/api.py",
-        "fix":  "electron-builder --dir --armv7l --linux deb"
+        "fix":  "USE_SYSTEM_FPM=true vue-cli-service electron:build --linux deb rpm --arm64 --armv7l"
     },
     "main": "background.js",
     "dependencies": {

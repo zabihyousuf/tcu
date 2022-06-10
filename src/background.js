@@ -85,12 +85,12 @@ async function createWindow() {
     );
 
     // Create the browser window.
-    const { Menu } = require('electron')
-    const electron = require('electron')
-    const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize
+    // const { Menu } = require('electron')
+    // const electron = require('electron')
+    // const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize
     win = new BrowserWindow({
-        width: width,
-        height: height,
+        width: 800,
+        height: 500,
         fullscreen: true,
         autoHideMenuBar: true,
         title: 'TCU',
@@ -101,13 +101,13 @@ async function createWindow() {
             // contextIsolation: !process.env.ELECTRON_NODE_INTEGRATION,
             // enableRemoteModule: true,
             preload: path.join(__dirname, "preload.js"),
-            // devTools: false,
+            devTools: false,
 
         },
     });
     win.maximize();
     win.show();
-    Menu.setApplicationMenu(false)
+    //Menu.setApplicationMenu(false)
 
 
     // Used to enable to remote modulue in renderer. 
