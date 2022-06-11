@@ -55,12 +55,8 @@
           </v-row>
         </v-col>
       </v-row>
-      <!-- <v-row justify="center">
-        <v-spacer></v-spacer>
-
-        <v-spacer v-if="running"></v-spacer>
+      <v-row justify="center">
         <v-btn
-          v-if="running"
           x-large
           style="font-size: 4em"
           id="reset"
@@ -70,8 +66,7 @@
           @click="reset('end')"
           >End Session</v-btn
         >
-        <v-spacer v-if="running"></v-spacer>
-      </v-row> -->
+      </v-row>
     </div>
     Î
   </v-container>
@@ -124,7 +119,7 @@ export default {
           this.start();
           // this.$forceUpdate();
         } else {
-          setTimeout(this.seeIfSessionShouldStart, 1000);
+          setTimeout(this.seeIfSessionShouldStart, 500);
         }
       }
     },

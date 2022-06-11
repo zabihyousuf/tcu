@@ -24,6 +24,7 @@ from RaceTrack import RaceTrack
 from utils import *
 import logging
 import sys
+from math import radians, cos, sin, asin, sqrt
 
 logformat = "%(asctime)s %(levelname)s %(module)s - %(funcName)s: %(message)s"
 datefmt = "%m-%d %H:%M"
@@ -38,7 +39,10 @@ logger = logging.getLogger("app")
 logger.addHandler(stream_handler)
 
 # main db connection
-db = pymysql.connect(**mainConfig)
+try:
+    db = pymysql.connect(**mainConfig)
+except:
+    pass 
 
 
 # device config api
@@ -131,24 +135,36 @@ def add_session():
             form = request.get_json(silent=True).get('form')
             cursor = db.cursor()
             for i in form:
+                try:
                 # insert data in database
-                cursor.execute(
-                    "INSERT INTO `enable_ninja_local`.track_session (created_date, average_lap, fastest_lap, device_id) VALUES (%s, %s, %s, %s)",
-                    (i['sessionDate'], i['avgLap'], i['fastestLap'], deviceID))
-                db.commit()
+                    cursor.execute(
+                        "INSERT INTO `enable_ninja_local`.track_session (created_date, average_lap, fastest_lap, device_id) VALUES (%s, %s, %s, %s)",
+                        (i['sessionDate'], i['avgLap'], i['fastestLap'], deviceID))
+                    db.commit()
 
-                # get last inserted id
-                cursor.execute(
-                    "SELECT SESSION_ID FROM `enable_ninja_local`.track_session ORDER BY SESSION_ID DESC LIMIT 1")
-                seshID = cursor.fetchone()[0]
-                print(seshID)
+                    # get last inserted id
+                    cursor.execute(
+                        "SELECT SESSION_ID FROM `enable_ninja_local`.track_session ORDER BY SESSION_ID DESC LIMIT 1")
+                    seshID = cursor.fetchone()[0]
+                    print(seshID)
+                except:
+                    pass
+                with open("session_data.txt", "a") as file1:
+                # Writing data to a file
+                    file1.write(i['sessionDate'], i['avgLap'], i['fastestLap'] + "\n")
 
                 # insert data in lap table
                 for j in i['laps']:
-                    cursor.execute(
-                        "INSERT INTO `enable_ninja_local`.lap (track_session_id, lap_number, lap_time, lap_time_diff) VALUES (%s, %s, %s, %s)",
-                        (int(seshID), j['lap'], j['time'], j['timeDiff']))
-                    db.commit()
+                    try:
+                        cursor.execute(
+                            "INSERT INTO `enable_ninja_local`.lap (track_session_id, lap_number, lap_time, lap_time_diff) VALUES (%s, %s, %s, %s)",
+                            (int(seshID), j['lap'], j['time'], j['timeDiff']))
+                        db.commit()
+                    except:
+                        pass
+                    with open("session_data.txt", "a") as file1:
+                    # Writing data to a file
+                        file1.write(int(seshID), j['lap'], j['time'], j['timeDiff'] + "\n")
             
             with open("session_data.txt", "a") as file1:
                 # Writing data to a file
@@ -219,11 +235,12 @@ class GetIfLapped(Resource):
 
                 # Qx = 38.5788172
                 # Qy = -77.3057
-                distVal = math.dist([Px, Py], [Qx, Qy])
-                if distVal < 5:
+                # distVal = math.dist([Px, Py], [Qx, Qy])
+                lapped = lappedHelper(Py, Px, Qy, Qx)
+                if lapped:
                     # return jsonify({'it works'})
-                    return jsonify({"lapped": "true", 'currentRaceTrack': CurrentRaceTrack.track_name, "lat":CurrentRaceTrack.start_latitude, "lon":CurrentRaceTrack.start_longitude,  'distance':distVal})
-                return jsonify({"lapped": "false", "race_track_lat":CurrentRaceTrack.start_latitude, "race_track_lon":CurrentRaceTrack.start_longitude,  'distance':distVal, 'device_lat':Px, 'device_lon':Py})
+                    return jsonify({"lapped": "true", 'currentRaceTrack': CurrentRaceTrack.track_name, "lat":CurrentRaceTrack.start_latitude, "lon":CurrentRaceTrack.start_longitude})
+                return jsonify({"lapped": "false", "race_track_lat":CurrentRaceTrack.start_latitude, "race_track_lon":CurrentRaceTrack.start_longitude, 'device_lat':Px, 'device_lon':Py})
                 # return jsonify({'it doesnt work'})
             else:
                 return jsonify({"lapped": "false"})
@@ -269,6 +286,8 @@ def findClosestTrack(device):
         # loop through the tracks and make a list of the track objects
         track_list = []
         for i in tracks:
+            with open("tracks.txt", "w+") as trackFile:
+                trackFile.write(i[0], i[1], i[2], i[3])
             track_list.append(RaceTrack(i[0], i[1], i[2], i[3]))
 
         # find the closest track
