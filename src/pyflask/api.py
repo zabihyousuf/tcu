@@ -17,7 +17,7 @@ import sys
 from pathlib import Path
 import uuid
 from settings import *
-# from gps import *
+from gps import *
 import time
 from Device import DeviceObject, DeviceData
 from RaceTrack import RaceTrack
@@ -228,8 +228,8 @@ class GetIfLapped(Resource):
 
                 # CurrentDevice.current_latitude = 38.5785788
                 # CurrentDevice.current_longitude = -77.3046977
-                print(type(obj.latitude)
-                if obj.latitude != 0.0:
+                print(type(obj.latitude))
+                if obj.latitude is not float(0.0):
                     with open("session_data.txt", "a") as file1:
                         # Writing data to a file
                         file1.write(obj.printObject() + "\n")
@@ -337,10 +337,11 @@ def findClosestTrack(device):
         # find the closest track
         allCloseTracks = []
         for i in track_list:
-            # print(i, file=sys.stderr)
-            calc = math.dist([CurrentDevice.current_latitude, CurrentDevice.current_longitude],
+            	print(i)
+		if i.start_latitude is not '':
+			calc = math.dist([CurrentDevice.current_latitude, CurrentDevice.current_longitude],
                              [float(i.start_latitude), float(i.start_longitude)])
-            allCloseTracks.append({'track': i, 'distance': calc})
+			allCloseTracks.append({'track': i, 'distance': calc})
         if len(allCloseTracks) == 0:
             logger.info(
                 {"returnValue": f"None"})
