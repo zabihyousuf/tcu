@@ -92,7 +92,7 @@ async function createWindow() {
         width: 800,
         height: 500,
         fullscreen: true,
-        // autoHideMenuBar: true,
+        autoHideMenuBar: true,
         title: 'TCU',
         webPreferences: {
             // Use pluginOptions.nodeIntegration, leave this alone for recommended security.
@@ -101,7 +101,7 @@ async function createWindow() {
             // contextIsolation: !process.env.ELECTRON_NODE_INTEGRATION,
             // enableRemoteModule: true,
             preload: path.join(__dirname, "preload.js"),
-            // devTools: false,
+            devTools: false,
 
         },
     });
