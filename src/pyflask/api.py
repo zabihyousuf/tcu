@@ -44,9 +44,9 @@ try:
     db = pymysql.connect(**mainConfig)
     connectedToDB = True
 except:
-
     pass
 
+print(connectedToDB)
 # device config api
 deviceID = 0
 # device_id, accound_holder_id, device_data, device_status
@@ -337,11 +337,11 @@ def findClosestTrack(device):
         # find the closest track
         allCloseTracks = []
         for i in track_list:
-            	print(i)
-		if i.start_latitude is not '':
-			calc = math.dist([CurrentDevice.current_latitude, CurrentDevice.current_longitude],
+            print(i)
+            if i.start_latitude is not "":
+                calc = math.dist([CurrentDevice.current_latitude, CurrentDevice.current_longitude],
                              [float(i.start_latitude), float(i.start_longitude)])
-			allCloseTracks.append({'track': i, 'distance': calc})
+                allCloseTracks.append({'track': i, 'distance': calc})
         if len(allCloseTracks) == 0:
             logger.info(
                 {"returnValue": f"None"})
