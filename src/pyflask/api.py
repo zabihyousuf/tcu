@@ -326,9 +326,9 @@ def findClosestTrack(device):
             sql = "SELECT * FROM enable_ninja_local.tracks"
             cursor.execute(sql)
             tracks = cursor.fetchall()
-        else:
-            with open("tracks.txt", 'r') as trackFile:
-                tracks = [x.strip() for x in trackFile.readlines()]
+        # else:
+        #     with open("tracks.txt", 'r') as trackFile:
+        #         tracks = [x.strip() for x in trackFile.readlines()]
         # loop through the tracks and make a list of the track objects
 
         for i in tracks:
