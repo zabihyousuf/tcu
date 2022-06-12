@@ -82,6 +82,7 @@ export default createStore({
             axios
                 .get(`${this.state.apiUrl}/GetIfLapped`)
                 .then((response) => {
+                    /* eslint-disable */
                     commit('set', ['lapped', response.data.lapped]);
                     commit('set', ['loading', false]);
                     console.log(response);

@@ -17,7 +17,7 @@ import sys
 from pathlib import Path
 import uuid
 from settings import *
-from gps import *
+# from gps import *
 import time
 from Device import DeviceObject, DeviceData
 from RaceTrack import RaceTrack
@@ -38,12 +38,14 @@ stream_handler.setFormatter(logging.Formatter(fmt=logformat, datefmt=datefmt))
 logger = logging.getLogger("app")
 logger.addHandler(stream_handler)
 
+connectedToDB = False
 # main db connection
 try:
     db = pymysql.connect(**mainConfig)
+    connectedToDB = True
 except:
-    pass 
 
+    pass
 
 # device config api
 deviceID = 0
@@ -67,6 +69,7 @@ gpsd = gps(mode=WATCH_ENABLE|WATCH_NEWSTYLE)
 @api.route("/api_version", endpoint="apiVersion")
 class ApiVersion(Resource):
     global logger
+
     def get(self):
         logger.info(f'{API_VERSION} is the current version!')
         return API_VERSION
@@ -77,7 +80,7 @@ class HelloWorld(Resource):
     @api.response(200, "Success")
     @api.response(400, "Validation Error")
     def get(self):
-        global deviceID, logger
+        global deviceID, logger, connectedToDB, deviceUrl
         if request.method == 'GET':
             try:
                 # this is for the first time load only to create the file
@@ -101,11 +104,12 @@ class HelloWorld(Resource):
                         f.close()
 
                 # query to check to see if the device id has an account associated with it
-                cursor = db.cursor()
-                sql = "SELECT * FROM `enable_ninja_local`.device_x_user WHERE DEVICE_ID = %s"
-                val = (deviceID)
+                if connectedToDB is not False:
+                    cursor = db.cursor()
+                    sql = "SELECT * FROM `enable_ninja_local`.device_x_user WHERE DEVICE_ID = %s"
+                    val = (deviceID)
 
-                cursor.execute(sql, val)
+                    cursor.execute(sql, val)
                 response = "Server active!!"
                 CurrentDevice.setId(deviceID)
                 # CurrentDevice.setAccountHolderId(cursor.fetchone()[1])
@@ -128,49 +132,51 @@ def add_session():
     :return:
         either a json object with the session id or an error message
     """
-    global logger, CurrentDevice
+    global logger, CurrentDevice, connectedToDB
     if request.method == 'POST':
         try:
             results = []
             form = request.get_json(silent=True).get('form')
-            cursor = db.cursor()
+            if connectedToDB is not False:
+                cursor = db.cursor()
             for i in form:
                 try:
-                # insert data in database
-                    cursor.execute(
-                        "INSERT INTO `enable_ninja_local`.track_session (created_date, average_lap, fastest_lap, device_id) VALUES (%s, %s, %s, %s)",
-                        (i['sessionDate'], i['avgLap'], i['fastestLap'], deviceID))
-                    db.commit()
+                    # insert data in database
+                    if connectedToDB is not False:
+                        cursor.execute(
+                            "INSERT INTO `enable_ninja_local`.track_session (created_date, average_lap, fastest_lap, device_id) VALUES (%s, %s, %s, %s)",
+                            (i['sessionDate'], i['avgLap'], i['fastestLap'], deviceID))
+                        db.commit()
 
-                    # get last inserted id
-                    cursor.execute(
-                        "SELECT SESSION_ID FROM `enable_ninja_local`.track_session ORDER BY SESSION_ID DESC LIMIT 1")
-                    seshID = cursor.fetchone()[0]
-                    print(seshID)
+                        # get last inserted id
+                        cursor.execute(
+                            "SELECT SESSION_ID FROM `enable_ninja_local`.track_session ORDER BY SESSION_ID DESC LIMIT 1")
+                        seshID = cursor.fetchone()[0]
+                        print(seshID)
                 except:
                     pass
                 with open("session_data.txt", "a") as file1:
-                # Writing data to a file
-                    file1.write(i['sessionDate'], i['avgLap'], i['fastestLap'] + "\n")
+                    # Writing data to a file
+                    file1.write(f" {i['sessionDate']}, {i['avgLap']}, {i['fastestLap']} + '\n'")
 
                 # insert data in lap table
                 for j in i['laps']:
                     try:
-                        cursor.execute(
-                            "INSERT INTO `enable_ninja_local`.lap (track_session_id, lap_number, lap_time, lap_time_diff) VALUES (%s, %s, %s, %s)",
-                            (int(seshID), j['lap'], j['time'], j['timeDiff']))
-                        db.commit()
+                        if connectedToDB is not False:
+                            cursor.execute(
+                                "INSERT INTO `enable_ninja_local`.lap (track_session_id, lap_number, lap_time, lap_time_diff) VALUES (%s, %s, %s, %s)",
+                                (int(seshID), j['lap'], j['time'], j['timeDiff']))
+                            db.commit()
                     except:
                         pass
                     with open("session_data.txt", "a") as file1:
-                    # Writing data to a file
-                        file1.write(int(seshID), j['lap'], j['time'], j['timeDiff'] + "\n")
-            
+                        # Writing data to a file
+                        file1.write(f"{int(seshID)}, {j['lap']}, {j['time']}, {j['timeDiff']} + '\n'")
+
             with open("session_data.txt", "a") as file1:
                 # Writing data to a file
                 file1.write("End Entry \n")
-            results = cursor.fetchall()
-            return jsonify(results)
+            return jsonify("success")
         except Exception as e:
             logger.error(
                 {"error": f"An error occurred in the add_session method with exception ({e})"})
@@ -180,6 +186,7 @@ def add_session():
 @api.route("/start", endpoint="start")
 class Start(Resource):
     global logger
+
     def get(self):
         global CurrentDevice, CurrentRaceTrack
         try:
@@ -191,22 +198,23 @@ class Start(Resource):
                     CurrentRaceTrack = raceTrackMethod
                     CurrentDevice.setTrackFound(True)
                     CurrentDevice.setCurrentTrack(CurrentRaceTrack)
-    
-                    
+
             # p = Process(target=Start_Recording_Data, args=(recording_on,))
             # p.start()
             if CurrentRaceTrack != None:
-                return jsonify({"track":CurrentRaceTrack.track_name, "lat":CurrentRaceTrack.start_latitude, "lon":CurrentRaceTrack.start_longitude})
+                return jsonify({"track": CurrentRaceTrack.track_name, "lat": CurrentRaceTrack.start_latitude,
+                                "lon": CurrentRaceTrack.start_longitude})
             else:
                 return jsonify({"error": "No track found"})
         except Exception as e:
-            logger.error( {"error": f"An error occurred in the start method with exception ({e})"})
+            logger.error({"error": f"An error occurred in the start method with exception ({e})"})
             return jsonify({"error": f"An error occurred in the start method with exception ({e})"})
 
 
 @api.route("/GetIfLapped", endpoint="getIfLapped")
 class GetIfLapped(Resource):
     global logger
+
     def get(self):
         global CurrentDevice, CurrentRaceTrack, gpsd
         try:
@@ -217,7 +225,10 @@ class GetIfLapped(Resource):
                 CurrentDevice.addToObject(obj)
                 CurrentDevice.current_latitude = obj.latitude
                 CurrentDevice.current_longitude = obj.longitude
-                # print(type(obj.latitude)
+
+                # CurrentDevice.current_latitude = 38.5785788
+                # CurrentDevice.current_longitude = -77.3046977
+                print(type(obj.latitude)
                 if obj.latitude != 0.0:
                     with open("session_data.txt", "a") as file1:
                         # Writing data to a file
@@ -226,24 +237,51 @@ class GetIfLapped(Resource):
                 Py = float(CurrentDevice.current_longitude)
 
                 logger.info(
-                                {"testing": f"Value ({CurrentRaceTrack})"})
+                    {"testing": f"Value ({CurrentRaceTrack})"})
                 Qx = float(CurrentRaceTrack.start_latitude)
                 Qy = float(CurrentRaceTrack.start_longitude)
 
-                # Px = 38.5788172
-                # Py = -77.3057
-
-                # Qx = 38.5788172
-                # Qy = -77.3057
                 # distVal = math.dist([Px, Py], [Qx, Qy])
                 lapped = lappedHelper(Py, Px, Qy, Qx)
-                if lapped:
+                if lapped[0]:
                     # return jsonify({'it works'})
-                    return jsonify({"lapped": "true", 'currentRaceTrack': CurrentRaceTrack.track_name, "lat":CurrentRaceTrack.start_latitude, "lon":CurrentRaceTrack.start_longitude})
-                return jsonify({"lapped": "false", "race_track_lat":CurrentRaceTrack.start_latitude, "race_track_lon":CurrentRaceTrack.start_longitude, 'device_lat':Px, 'device_lon':Py})
+                    logger.info({
+                        "inlapped true retrun": "trrue",
+                        "lapped": "true",
+                        'currentRaceTrack': CurrentRaceTrack.track_name,
+                        "lat": CurrentRaceTrack.start_latitude,
+                        "lon": CurrentRaceTrack.start_longitude,
+                        "helper": lapped[1]}
+                    )
+                    return jsonify(
+                        {
+                            "lapped": "true",
+                            'currentRaceTrack': CurrentRaceTrack.track_name,
+                            "lat": CurrentRaceTrack.start_latitude,
+                            "lon": CurrentRaceTrack.start_longitude,
+                            "helper": lapped[1]
+                        })
+                logger.info({
+                    "inlapped false retrun": "false",
+                    "lapped": "false",
+                    "race_track_lat": CurrentRaceTrack.start_latitude,
+                    "race_track_lon": CurrentRaceTrack.start_longitude,
+                    'device_lat': Px,
+                    'device_lon': Py,
+                    "helper": lapped[1]}
+                )
+                return jsonify(
+                    {
+                        "lapped": "false",
+                        "race_track_lat": CurrentRaceTrack.start_latitude,
+                        "race_track_lon": CurrentRaceTrack.start_longitude,
+                        'device_lat': Px,
+                        'device_lon': Py,
+                        "helper": lapped[1]
+                    })
                 # return jsonify({'it doesnt work'})
             else:
-                return jsonify({"lapped": "false"})
+                return jsonify({"message": "Either the Device or the race track was not found"})
         except Exception as e:
             logger.error(
                 {"error": f"An error occurred in the GetIfLapped method with exception ({e})"})
@@ -253,7 +291,7 @@ class GetIfLapped(Resource):
 def Start_Recording_Data(append_to_object):
     global logger, gpsd
     try:
-        global CurrentDevice,  CurrentRaceTrack
+        global CurrentDevice, CurrentRaceTrack
         while True:
             report = gpsd.next()
             obj = parseGPSData(report)
@@ -271,23 +309,29 @@ def Start_Recording_Data(append_to_object):
 def findClosestTrack(device):
     # Find the closest track to the device
     # Get the tracks from the database
-    global logger, CurrentDevice, CurrentRaceTrack, gpsd
+    global logger, CurrentDevice, CurrentRaceTrack, gpsd, connectedToDB
     try:
         report = gpsd.next()
         obj = parseGPSData(report)
         CurrentDevice.current_latitude = obj.latitude
         CurrentDevice.current_longitude = obj.longitude
-        
-        cursor = db.cursor()
-        sql = "SELECT * FROM enable_ninja_local.tracks"
-        cursor.execute(sql)
-        tracks = cursor.fetchall()
 
-        # loop through the tracks and make a list of the track objects
+        # CurrentDevice.current_latitude = 38.5785788
+        # CurrentDevice.current_longitude = -77.3046977
+
         track_list = []
+        tracks = []
+        if connectedToDB is not False:
+            cursor = db.cursor()
+            sql = "SELECT * FROM enable_ninja_local.tracks"
+            cursor.execute(sql)
+            tracks = cursor.fetchall()
+        else:
+            with open("tracks.txt", 'r') as trackFile:
+                tracks = [x.strip() for x in trackFile.readlines()]
+        # loop through the tracks and make a list of the track objects
+
         for i in tracks:
-            with open("tracks.txt", "w+") as trackFile:
-                trackFile.write(i[0], i[1], i[2], i[3])
             track_list.append(RaceTrack(i[0], i[1], i[2], i[3]))
 
         # find the closest track
@@ -298,6 +342,8 @@ def findClosestTrack(device):
                              [float(i.start_latitude), float(i.start_longitude)])
             allCloseTracks.append({'track': i, 'distance': calc})
         if len(allCloseTracks) == 0:
+            logger.info(
+                {"returnValue": f"None"})
             return None
         else:
             sorted(allCloseTracks, key=lambda d: d['distance'])

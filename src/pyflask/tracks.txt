@@ -1,0 +1,1046 @@
+1, 103rd Street Kart Track, 30.246222, -81.828278
+2, 7 Laghi Kart, 45.063972, 9.099944
+3, Abbeville - Kart East, 50.136333, 1.840667
+4, Abbeville - Kart South, 50.133583, 1.831389
+5, Abbeville Circuit, 50.134111, 1.833361
+6, Achna Speedway, 35.026583, 33.799528
+7, Action Karting - Bandimere, 39.662472, -105.186472
+8, Actua Lyon Karting - East, 45.683361, 5.074111
+9, Actua Lyon Karting - North, 45.684333, 5.074639
+10, Actua Lyon Karting - West, 45.683389, 5.072917
+11, Adams Motorsports Park, 34.008556, -117.382278
+12, Adelaide - Full Circuit, -34.699250, 138.568472
+13, Adelaide - Oval, -34.699250, 138.568472
+14, Adelaide - Short Circuit, -34.699250, 138.568472
+15, Adelaide GP Circuit, -34.930361, 138.620500
+16, Adirondack Intl. Speedway, 43.853278, -75.453194
+17, Adria - Kart, 45.046028, 12.149833
+18, Adria Intl. Raceway, 45.044722, 12.147806
+19, Ahvenisto, 61.003667, 24.417972
+20, Aintree Motor Racing Circuit, 53.475278, -2.939917
+21, Al Forsan Kart Track, 24.404889, 54.543222
+22, Alastaro, 60.976222, 22.658167
+23, Albacete, 39.005139, -1.795611
+24, Albi, 43.916028, 2.118806
+25, Alcarras, 41.619250, 0.402917
+26, Alcarras - Kart, 41.618806, 0.405111
+27, Aldo Scribante, -33.806833, 25.646028
+28, Almeria, 37.088611, -2.269250
+29, AMC Kart, 44.535972, 26.149722
+30, Ampfing Kartbahn, 48.245806, 12.442778
+31, Andersen RacePark, 27.606028, -82.541639
+32, Angerville - East Track, 48.290528, 2.007167
+33, Angerville - Gabriel Thirouin, 48.289694, 2.003528
+34, Anglesey Club Circuit, 53.188361, -4.496389
+35, Anglesey Coastal Circuit, 53.188361, -4.496389
+36, Anglesey GP Circuit, 53.188361, -4.496389
+37, Anglesey National Circuit, 53.190167, -4.497444
+38, Anhembi Parque, -23.515639, -46.645056
+39, Anneau du Rhin - Competition 3.0 km, 47.949833, 7.420833
+40, Anneau du Rhin - Competition 3.7 km, 47.949833, 7.420833
+41, "Anneau du Rhin - dentrainement 1.1 km", 47.951111, 7.415694
+42, Anneau du Rhin - Loisir 4.0 km, 47.949833, 7.420833
+43, Anneau du Rhin - Petit 2.0 km, 47.946444, 7.426528
+44, Anneau du Rhin - West Loop 1.0 km, 47.949833, 7.420833
+45, Ansan Speedway, 37.283083, 126.828917
+46, Aomori Speed Park, 40.758333, 140.839694
+47, Apex Kart Racing, 33.855417, -117.202833
+48, Arad, 31.255917, 35.166083
+49, Aravete, 59.124333, 25.746000
+50, Arctic Circle - Kart, 66.422417, 14.441722
+51, Arctic Circle Raceway, 66.423694, 14.446306
+52, Area 27 - Full, 49.162167, -119.520556
+53, Area 27 - Short, 49.162167, -119.520556
+54, Arena Essex - Oval, 51.493944, 0.282833
+55, Arizona Motorsports - East, 33.516583, -112.390139
+56, Arizona Motorsports - Full, 33.513722, -112.390472
+57, Arizona Motorsports - West, 33.513722, -112.390472
+58, Arizona Speedway, 33.311222, -111.565306
+59, Arrecifes, -34.075833, -60.103333
+60, Arroyo Seco Raceway, 32.236833, -107.429667
+61, Ascari Race Resort, 36.824861, -5.083333
+62, Aspen - Kart, 39.266944, -106.879250
+63, Aspen Sports Car Club, 39.266417, -106.880111
+64, Athens Circuit, 37.987028, 23.362889
+65, Athens Circuit - Kart, 37.986583, 23.363889
+66, Atlanta Motor Speedway, 33.385722, -84.316889
+67, Atlanta Motorsports - Full, 34.433167, -84.176222
+68, Atlanta Motorsports - Kart, 34.436472, -84.175194
+69, Atlanta Motorsports - North, 34.436667, -84.179806
+70, Atlanta Motorsports - South, 34.433167, -84.176222
+71, Atlantic Motorsport Park, 45.145056, -63.449778
+72, Audru Ring - Full, 58.402278, 24.448139
+73, Audru Ring - North, 58.404472, 24.450306
+74, Audru Ring - South, 58.402278, 24.448139
+75, Auto Clearing Motor Speedway, 52.218500, -106.661528
+76, Auto Club Speedway - Interior, 34.089333, -117.500194
+77, Auto Club Speedway - Kart, 34.086583, -117.508806
+78, Auto Club Speedway - Oval, 34.086083, -117.500556
+79, Auto Club Speedway - Roval, 34.086083, -117.500556
+80, Autobahn Country Club - Full, 41.456556, -88.125889
+81, Autobahn Country Club - Kart, 41.452028, -88.124417
+82, Autobahn Country Club - North, 41.456556, -88.125889
+83, Autobahn Country Club - South, 41.455222, -88.126889
+84, Autopolis, 33.037500, 130.975417
+85, Autopolis - Kart, 33.035111, 130.976556
+86, Ayrton Senna, -23.281861, -51.168806
+87, Ayrton Senna - Kart, -23.282278, -51.161944
+88, Azimut, 55.763833, 38.407000
+89, Bahrain GP Circuit, 26.032444, 50.510472
+90, Bahrain Intl. Circuit, 26.032167, 50.512417
+91, Bahrain Outer Circuit, 26.032444, 50.510472
+92, Bahrain Oval, 26.032444, 50.510472
+93, Baradero, -33.814222, -59.480944
+94, Baradero - Kart, -33.817361, -59.481028
+95, Barbagallo Raceway, -31.664111, 115.786361
+96, Barber East Course, 33.532667, -86.617694
+97, Barber Full Track, 33.532667, -86.619694
+98, Barber Short Course, 33.532667, -86.619694
+99, Baskerville Raceway, -42.746417, 147.294750
+100, Batangas - Kart, 13.820722, 121.277139
+101, Batangas Racing Circuit, 13.820167, 121.277306
+102, Beausoleil - Laval, 48.035750, -0.743694
+103, Bedford - East Circuit, 52.234056, -0.460917
+104, Bedford - Full GT Circuit, 52.235111, -0.474306
+105, Bedford - Kart, 52.234694, -0.473056
+106, Bedford - North Circuit, 52.237194, -0.466944
+107, Bedford - SEN Circuit, 52.232333, -0.473417
+108, Bedford - South Circuit, 52.232333, -0.473417
+109, Bedford - SW Circuit, 52.235111, -0.474306
+110, Bedford - West Circuit, 52.235111, -0.474306
+111, Beech Ridge Motor Speedway, 43.610778, -70.380694
+112, Belle Isle Street Circuit, 42.337056, -82.998583
+113, "Benardo OHiggins", -20.248222, -70.087861
+114, Beranovac, 43.702944, 20.714167
+115, Big Country Speedway, 41.074333, -104.803111
+116, Big Willow, 34.871500, -118.263722
+117, Bikernieki Race Circuit, 56.965000, 24.229139
+118, Billings Speedway, 46.003278, -108.473472
+119, Bira - Kart, 12.921944, 101.007972
+120, Bira Intl. Circuit, 12.920694, 101.008556
+121, Bishopscourt, 54.303306, -5.581778
+122, Blackhawk Farms Raceway, 42.488444, -89.117528
+123, Blister Berg - Eastern Loop, 51.793611, 9.071278
+124, Blister Berg - Full Track, 51.793611, 9.071278
+125, Blister Berg - Western Loop, 51.791528, 9.060306
+126, Blue Max Kart Club, 38.575861, -121.732750
+127, Bluegrass Motorsports Park, 38.764556, -84.803083
+128, Blyton Park - East, 53.459056, -0.688944
+129, Blyton Park - Inner, 53.461139, -0.692139
+130, Blyton Park - Outer, 53.459056, -0.688944
+131, BMW PC East - 1 Day M Track, 34.905861, -82.178111
+132, BMW PC East - Area 3, 34.906111, -82.175556
+133, BMW PC East - Area 7, 34.906417, -82.172833
+134, BMW PC East - M School Track, 34.906667, -82.176806
+135, BMW PC West - Full Track, 33.602972, -116.153833
+136, BMW PC West - North Course, 33.602972, -116.153833
+137, BMW PC West - South Course, 33.601361, -116.154417
+138, Boavista, 41.173361, -8.687639
+139, Bonanza Raceway, 14.590833, 101.426722
+140, Boomland Kart Track, 14.553667, 120.985944
+141, Botniaring, 62.624472, 22.015361
+142, Bourbonnais, 46.536972, 3.428833
+143, Brainerd - Competition Course, 46.416861, -94.274806
+144, Brainerd - Donnybrooke Course, 46.420111, -94.276222
+145, Brainerd - Kart, 46.417722, -94.278806
+146, Brands Hatch - Full, 51.360306, 0.260333
+147, Brands Hatch - Kart, 51.361917, 0.262389
+148, Brands Hatch - Short, 51.360306, 0.260333
+149, Brandsen, -35.179861, -58.265500
+150, Brasil Kirin Arena, -23.248083, -47.341806
+151, Bremerton Motorsports Park, 47.490167, -122.753778
+152, Bristol Motor Speedway, 36.516000, -82.256139
+153, Brno Circuit, 49.202861, 16.445444
+154, Broadford - Full Track, -37.215917, 145.082389
+155, Broadford - South Course, -37.217917, 145.081833
+156, Buddh Intl. Circuit, 28.351611, 77.534472
+157, Bushnell Motorsports - Oval, 28.672917, -82.149889
+158, Bushnell Motorsports - South S/F, 28.671861, -82.149472
+159, Bushnell Motorsports - West S/F, 28.672917, -82.149889
+160, Bushy Park Circuit, 13.139167, -59.467361
+161, Butterfly Farm, -33.571583, 150.836500
+162, Buttonwillow - East Loop, 35.490667, -119.541250
+163, Buttonwillow - Kart, 35.492194, -119.543222
+164, Buttonwillow - Main, 35.488750, -119.544500
+165, Buttonwillow - West Loop, 35.489667, -119.548194
+166, Cabo Negro, -52.968111, -70.836556
+167, Cadwell Park Racing Circuit, 53.310222, -0.059444
+168, Calabogie Motorsports Park, 45.301778, -76.671444
+169, Calafat, 40.932194, 0.839444
+170, Calder Park - Club Circuit, -37.670889, 144.753778
+171, Calder Park - Full Combined Track, -37.670889, 144.753778
+172, Calder Park - National Circuit, -37.670889, 144.753778
+173, Calder Park - Thunderdome Oval, -37.673056, 144.760000
+174, Campos, -21.607778, -41.317417
+175, Can Padro, 41.654083, 1.879028
+176, Canadian Tire - Driver Dev Long CW, 44.052556, -78.686528
+177, Canadian Tire - Driver Dev Short CW, 44.052556, -78.686528
+178, Canadian Tire - GP Circuit, 44.054333, -78.674361
+179, Canadian Tire - Kart, 44.053861, -78.681222
+180, Canadian Tire - Kart East, 44.054056, -78.680444
+181, Canyon Speedway Park, 33.794389, -112.270278
+182, Capuava, -23.065333, -47.099306
+183, Carmona Racing Circuit, 14.281500, 121.009028
+184, Carole - East Circuit, 48.978917, 2.522694
+185, Carole - Full Circuit, 48.978917, 2.522694
+186, Carole - Kart, 48.978861, 2.523722
+187, Carole - West Circuit, 48.979417, 2.521528
+188, Carolina Motorsports Park - East Course, 34.485222, -80.593444
+189, Carolina Motorsports Park - Full Track, 34.486722, -80.595750
+190, Carolina Motorsports Park - Kart, 34.490389, -80.597083
+191, Carolina Motorsports Park - West Course, 34.486722, -80.595750
+192, Cartagena, 37.644444, -1.035222
+193, Caruaru, -8.231694, -35.986250
+194, Cascavel, -24.982167, -53.388694
+195, Casper Raceway, 42.876750, -106.318611
+196, Castelletto di Branduzzo - Full, 45.070944, 9.105639
+197, Castelletto di Branduzzo - North, 45.070944, 9.105639
+198, Castelletto di Branduzzo - Oval, 45.069611, 9.104306
+199, Castelletto di Branduzzo - Short, 45.070944, 9.105639
+200, Castelletto di Branduzzo - South, 45.070944, 9.105639
+201, Castle Combe Circuit, 51.492750, -2.216028
+202, Castrol Raceway - Oval, 53.333417, -113.591500
+203, Castrol Raceway - Road Course, 53.332250, -113.593528
+204, Catalunya, 41.570000, 2.261222
+205, Cellole, 41.185639, 13.853417
+206, Cemetery Circuit, -39.937833, 175.050000
+207, Centenario, -38.852000, -68.152778
+208, Central Arizona Raceway, 32.870389, -111.571306
+209, Central Circuit, 35.025139, 134.922583
+210, Central City PIT Rally, 39.790417, -105.508389
+211, Chaika - Kart, 50.437944, 30.299139
+212, Chaika - Oval Track, 50.437861, 30.299917
+213, Chaika Circuit, 50.439167, 30.293167
+214, Chang Intl. Circuit, 14.958556, 103.084611
+215, Charade, 45.740389, 3.026167
+216, Charlotte 1/5 Mile Oval, 35.352250, -80.679000
+217, Charlotte County Speedway, 26.908778, -82.000389
+218, Charlotte Motor Speedway, 35.352250, -80.685583
+219, Checkered Flag Racing, 49.172472, -121.978167
+220, Chengdu - Kart, 30.586611, 104.122139
+221, Chengdu Goldenport Circuit, 30.587250, 104.119778
+222, Chiapas, 16.777889, -93.251583
+223, Chicagoland Speedway, 41.473139, -88.059833
+224, Chuckwalla Valley Raceway, 33.753667, -115.319611
+225, Chuckwalla Valley Raceway - CCW, 33.753667, -115.319611
+226, Circuit of the Americas - East, 30.138611, -97.627917
+227, Circuit of the Americas - Grand Prix, 30.131861, -97.639833
+228, Circuit of the Americas - West, 30.131861, -97.639833
+229, Clark Intl. Speedway, 15.207750, 120.538833
+230, Club Motorsports, 43.823194, -71.247583
+231, Club Motorsports - Kart, 43.824250, -71.241444
+232, Codegua, -34.037194, -70.631000
+233, Colorado Motorsports Park, 39.675778, -104.113917
+234, Colorado National Speedway, 40.062389, -104.973472
+235, Colorado State Patrol CCW, 39.745833, -105.177222
+236, Colorado State Patrol CW, 39.745833, -105.177222
+237, Crail - Kart, 56.274389, -2.602361
+238, Crail Raceway, 56.271444, -2.604667
+239, Cremona - Kart, 45.086222, 10.312611
+240, Cremona Circuit, 45.085278, 10.312639
+241, Crimea GP - Kart, 45.258500, 33.399806
+242, Crimea Grand Prix, 45.259167, 33.397167
+243, Cristais, -18.807750, -44.408528
+244, Croft Circuit, 54.455389, -1.555583
+245, Croix-en-Ternois, 50.378944, 2.296278
+246, Curborough Sprint Course, 52.712556, -1.807500
+247, Curitiba - Full Track, -25.448611, -49.195389
+248, Curitiba - Kart, -25.451917, -49.193139
+249, Curitiba - Outer Course, -25.448611, -49.195389
+250, Dallas Karting Complex, 33.010139, -96.234944
+251, Darlington Raceway, 34.293722, -79.906028
+252, Daytona - Oval, 29.187667, -81.072778
+253, Daytona - Road Course Long, 29.187667, -81.072778
+254, Daytona - Road Course Short, 29.187667, -81.072778
+255, Dezzi - 2.5km Circuit, -30.770361, 30.425500
+256, Dijon-Prenois, 47.363583, 4.898056
+257, Dolores, -36.327472, -57.696083
+258, Dominion Raceway - Oval, 38.138333, -77.504056
+259, Dominion Raceway - Road Course, 38.138611, -77.502389
+260, Donington Park Circuit, 52.829806, -1.379556
+261, Donnybrook - Kart, -17.828222, 31.180778
+262, Donnybrook Raceway, -17.825000, 31.185611
+263, Dover Intl. Speedway, 39.189806, -75.528611
+264, Driveway Austin - Center Course, 30.264139, -97.653361
+265, Driveway Austin - East Course, 30.264139, -97.653361
+266, Driveway Austin - Elevation L2, 30.263333, -97.656722
+267, Driveway Austin - Grand Prix L3, 30.263333, -97.656722
+268, Driveway Austin - Short L1, 30.263333, -97.656722
+269, Dubai Autodrome, 25.047417, 55.239583
+270, Dunedin Street Circuit, -45.885833, 170.496972
+271, Durban Street Circuit, -29.838722, 31.035139
+272, Eagles Canyon Raceway - Long, 33.367611, -97.429667
+273, Eagles Canyon Raceway - Short, 33.367611, -97.429667
+274, Eastern Creek - Kart, -33.805361, 150.882611
+275, Ebisu - Drift Stadium, 37.641889, 140.371389
+276, Ebisu - Higashi East Course, 37.644306, 140.370750
+277, Ebisu - Kita North Course, 37.646111, 140.364111
+278, Ebisu - Nishi Short Course, 37.639056, 140.374111
+279, Ebisu - Nishi West Course, 37.639694, 140.371056
+280, Ebisu - Togue Course, 37.646250, 140.369389
+281, Eboladrome, 51.512278, -1.801389
+282, El Jabali, 13.810306, -89.331389
+283, El Paso County Speedway, 39.029333, -104.295583
+284, Eldora Speedway, 40.318750, -84.634833
+285, Ellough Park Kart, 52.433833, 1.601000
+286, Enchanted Kingdom Kart Track, 14.281361, 121.094028
+287, Enzo e Dino Ferrari, 44.344389, 11.714028
+288, Estering, 53.447806, 9.693278
+289, Estoril, 38.749972, -9.392583
+290, Eurasia Domodedovo, 55.445028, 37.661861
+291, Euro-Ring, 47.146472, 19.458667
+292, EuroSpeedway Lausitz, 51.535083, 13.928222
+293, Eusebio Marcilla, -34.649500, -61.016083
+294, Evergreen Speedway, 47.868111, -121.988333
+295, Everland Speedway, 37.296361, 127.206417
+296, Fairlane Acres Speedway, 39.102500, -75.418611
+297, Falkenbergs Motorbana, 56.976250, 12.566444
+298, Falls Road Motor Circuit, -20.108806, 28.571083
+299, FIRM - East Loop Circuit, 29.846417, -82.056778
+300, FIRM - Full Road Course, 29.843917, -82.058083
+301, FIRM - Kart, 29.845444, -82.056611
+302, FIRM - West Loop Circuit, 29.843917, -82.058083
+303, Franciacorta, 45.513250, 10.005722
+304, Francis MAILLET, 49.026917, 5.891889
+305, Fuji - Short Circuit, 35.374611, 138.937278
+306, Fuji Speedway, 35.373833, 138.929750
+307, Gardermoen Raceway, 60.189750, 11.136750
+308, Gateway - Kart, 38.648694, -90.135167
+309, Gateway - Oval, 38.650444, -90.136917
+310, Gateway - Road Course, 38.650444, -90.136917
+311, Genk - Alonso Circuit, 50.988028, 5.562944
+312, Genk - CIK Circuit, 50.988500, 5.564306
+313, Genk - Full Track, 50.988500, 5.564306
+314, Gilles Villeneuve, 45.500056, -73.522667
+315, Gimli Motorsports Park, 50.628750, -97.050278
+316, GingerMan Raceway, 42.408028, -86.140472
+317, Glen Helen Raceway, 34.188528, -117.386917
+318, Goiania, -16.719417, -49.193028
+319, Goiania - Kart, -16.720083, -49.187639
+320, Golspie, 57.953889, -3.995333
+321, Goodwood Motorcircuit, 50.857944, -0.752611
+322, Gothenburg City Race, 57.714306, 11.962083
+323, Gotland Ring - Altar Track, 57.838750, 18.839333
+324, Gotland Ring - Full GP Circuit, 57.834278, 18.827889
+325, Gotland Ring - North Circuit, 57.837639, 18.831472
+326, Gotland Ring - South Circuit, 57.834278, 18.827889
+327, Gotland Ring - Tvelvar Track, 57.837639, 18.831472
+328, Gral Roca, -39.076417, -67.580389
+329, Grand Junction Motor Speedway, 39.108694, -108.491750
+330, Grand Prix of Toronto, 43.633944, -79.412556
+331, Grand Prize of America, 32.085111, -81.073444
+332, GrandSport Speedway CCW, 29.324722, -95.046278
+333, GrandSport Speedway CW, 29.324722, -95.046278
+334, Grange Motor Circuit, 34.621972, -117.169833
+335, Granja Viana, -23.605083, -46.836222
+336, Grattan Raceway, 43.095917, -85.385250
+337, Greenville-Pickens Speedway, 34.833917, -82.500806
+338, Grobnik, 45.382778, 14.509306
+339, Grundy County Speedway, 41.410167, -88.416667
+340, Guacima, 9.974417, -84.248056
+341, Guadix, 37.399694, -3.073028
+342, Guandong Intl. Circuit, 23.271278, 112.818139
+343, Guapore, -28.843917, -51.851583
+344, Guapore - Kart, -28.844722, -51.854111
+345, Gulf Coast Kartway, 29.846583, -95.886278
+346, Hallett Motor Racing Circuit, 36.220667, -96.590389
+347, Hamilton Street Circuit, -37.782611, 175.269500
+348, Hampton Downs Circuit, -37.356139, 175.077639
+349, Harnosands Motorpark, 62.599250, 17.815278
+350, Harris Hill Road, 29.918528, -97.873611
+351, HARRIS Resort Kart Track, 1.085833, 103.941278
+352, Havasu 95 Speedway, 34.446611, -114.249250
+353, Hawkeye Downs Raceway, 41.934306, -91.680944
+354, Hayden Speedway, 40.469722, -107.247111
+355, Heartland Park, 38.926583, -95.676667
+356, Heidburgring, 53.452222, 10.363972
+357, Hermanos Rodriguez, 19.406167, -99.092806
+358, Hidden Valley Raceway, -12.448361, 130.907722
+359, High Plains Raceway - Full, 39.735028, -103.894472
+360, High Plains Raceway - North, 39.735028, -103.894472
+361, High Plains Raceway - Short, 39.735028, -103.894472
+362, High Plains Raceway - West, 39.735028, -103.894472
+363, Highland Rim Speedway, 36.421278, -86.763111
+364, Hilo Kart Track, 19.675000, -155.026722
+365, Hiroshima Speedway Circuit, 34.530111, 133.222500
+366, Hockenheimring, 49.327750, 8.565833
+367, Hokkaido Speed Park, 42.921611, 140.714500
+368, Holden Perf. Driving Centre, -27.745472, 153.292917
+369, Homestead Miami - Kart, 25.454528, -80.415528
+370, Homestead Miami - Oval, 25.453667, -80.409694
+371, Homestead Miami - Road Course, 25.453667, -80.409694
+372, Honda Kyushu - Kart, 32.895361, 130.873861
+373, Honda Kyushu Circuit, 32.897722, 130.877306
+374, Honor Speedway, 38.308583, -104.669361
+375, Hooton Park Circuit, 53.310278, -2.941833
+376, Houston Motorsports Park, 29.889528, -95.230389
+377, Huicheng Kart Track, 23.021944, 114.174528
+378, Humboldt Speedway, 37.811028, -95.395750
+379, Hungaroring, 47.578889, 19.248389
+380, I-25 Speedway, 38.400722, -104.614250
+381, I-76 Speedway, 40.263083, -103.840778
+382, I-80 Speedway, 40.979611, -96.395917
+383, ICAR, 45.681056, -74.023306
+384, ICAR - Kart, 45.680361, -74.025250
+385, Iceland MotoPark, 63.954972, -22.445444
+386, IMI - Paved Course, 40.043083, -104.949694
+387, Inde - Full Track CCW, 32.225444, -110.005722
+388, Inde - Full Track CW, 32.225444, -110.005722
+389, Inde - North Course CCW, 32.228167, -110.009639
+390, Inde - North Course CW, 32.228167, -110.009639
+391, Inde - South Course CCW, 32.225444, -110.005722
+392, Inde - South Course CW, 32.225444, -110.005722
+393, Indianapolis Motor Speedway - Oval, 39.793139, -86.238861
+394, Indianapolis Motor Speedway - Road Course, 39.793139, -86.238861
+395, Indianapolis Raceway Park, 39.812528, -86.341833
+396, Inje Speedium - Full Track, 38.000500, 128.291250
+397, Inje Speedium - North Circuit, 38.000500, 128.291250
+398, Inje Speedium - South Circuit, 37.998861, 128.288361
+399, Interlomas, -38.620722, -72.466972
+400, Iowa Speedway, 41.673750, -93.014750
+401, Irungattukottai, 13.000944, 79.989750
+402, Irwindale Speedway, 34.110028, -117.987583
+403, ISAM Italy, 41.701417, 13.142917
+404, Istanbul Racing Circuit, 40.952194, 29.406194
+405, Jarama, 40.617139, -3.584194
+406, Jennings GP, 30.574889, -83.156417
+407, Jerez, 36.709694, -6.032528
+408, Johor Circuit, 1.480139, 103.908361
+409, Jose Carlos Pace, -23.703750, -46.699944
+410, Juan y Oscar Galvez - Circuit, -34.694556, -58.461694
+411, Juan y Oscar Galvez - Kart, -34.697556, -58.467750
+412, Jules Tacheny, 50.301333, 4.651389
+413, Junction Motor Speedway, 40.744306, -97.613389
+414, Juvenal Jeraldo, -29.982389, -71.221028
+415, Jyllandsringen, 56.176389, 9.660056
+416, Kaeng Krachan Circuit, 12.944556, 99.706194
+417, Kaina, 58.831222, 22.774833
+418, Kalgoorlie Intl. Speedway, -30.697833, 121.469000
+419, Kansas Speedway - Infield Loop, 39.114667, -94.829639
+420, Kansas Speedway - Oval, 39.116583, -94.833833
+421, Kansas Speedway - Roval, 39.116583, -94.833833
+422, Kari Motor Speedway, 10.900972, 77.051556
+423, Karlskoga - Kart, 59.380889, 14.509722
+424, Karlskoga Motorstadion, 59.383528, 14.514444
+425, Kartsport Southland, -46.442222, 168.251528
+426, KartWorld, 52.001417, -8.326389
+427, Kazanring, 55.866556, 49.260389
+428, Kemora Circuit, 63.420250, 23.983194
+429, Kentucky Speedway, 38.712583, -84.918556
+430, Kielce, 50.960889, 20.539722
+431, Killarney, -33.823722, 18.529083
+432, Killarney - Kart, -33.821972, 18.528444
+433, Kiltorcan Raceway, 52.462333, -7.182278
+434, Kinnekulle Ring, 58.546944, 13.397722
+435, Kirkistown, 54.456667, -5.472167
+436, Knockhill Racing Circuit, 56.130917, -3.506583
+437, Knutstorp, 55.987250, 13.113583
+438, Korean Intl. Circuit, 34.730722, 126.418278
+439, Korfez Pisti, 40.744639, 29.786167
+440, Korfez Pisti - Kart, 40.745194, 29.785250
+441, Kuningamae, 58.653389, 25.945278
+442, Kyalami - Kart, -25.996583, 28.070500
+443, Kyalami GP, -25.998778, 28.069917
+444, La Conca Kart Track, 40.129361, 18.349972
+445, La Crosse Speedway, 43.903444, -91.103722
+446, La Junta Raceway, 38.043806, -103.519361
+447, La Junta Raceway - Reverse (CCW), 38.043806, -103.519361
+448, La Mola - Long, 42.349694, 12.855056
+449, La Mola - Short, 42.349694, 12.855056
+450, La Pampilla, -29.957444, -71.353667
+451, Laguna Seca, 36.586472, -121.756639
+452, Laitse - Kart, 59.173528, 24.363556
+453, Laitse - Road Course, 59.174028, 24.364000
+454, Lake County Speedway, 41.752528, -81.226778
+455, Lakeside Karting, 51.492667, 0.286222
+456, Lakeside Park, -27.228472, 152.964889
+457, Lamar Speedway, 38.118500, -102.592306
+458, Lanac Park, -35.338194, 138.581694
+459, Langley Speedway, 37.086139, -76.386056
+460, Lanier National Speedway, 34.153778, -83.812278
+461, Laquais - Kart, 45.466528, 5.297528
+462, Laquais Circuit, 45.469722, 5.296389
+463, Larkhall, 55.752000, -3.978444
+464, Las Americas, 18.467944, -69.749306
+465, Lavelanet, 43.005750, 1.882167
+466, Le Mans, 47.949861, 0.207528
+467, Ledenon, 43.923167, 4.504139
+468, Leon, 21.035694, -101.574861
+469, Levante, 40.995083, 16.743139
+470, Lime Rock Park, 41.928583, -73.381000
+471, Linas-Montlhery, 48.622972, 2.245833
+472, Lincoln County Raceway, 41.161028, -100.812639
+473, Linkopings, 58.395778, 15.718833
+474, Linkopings - Kart, 58.393639, 15.718917
+475, Llandow Circuit, 51.432472, -3.498694
+476, Lombardore, 45.236778, 7.724750
+477, Lommerange - North Course, 49.339361, 5.978667
+478, Lommerange - South Course, 49.339111, 5.977361
+479, Long Beach Grand Prix, 33.762250, -118.187222
+480, Losail Intl. Circuit, 25.489083, 51.449694
+481, Lotus Driving Academy - Full Track, 52.560972, 1.175944
+482, Lotus Driving Academy - North Circuit, 52.564750, 1.180417
+483, Lotus Driving Academy - South Circuit, 52.560972, 1.175944
+484, Luddenham Raceway, -33.858889, 150.718889
+485, LVMS - Bullring, 36.264000, -115.019750
+486, LVMS - Dirt Oval, 36.285556, -115.010861
+487, LVMS - Exotics, 36.281028, -115.020389
+488, LVMS - Inside Road Course - Full, 36.272083, -115.010139
+489, LVMS - Inside Road Course - Short East, 36.273972, -115.008306
+490, LVMS - Inside Road Course - Short West, 36.272083, -115.010139
+491, LVMS - Kart, 36.264833, -115.021722
+492, LVMS - Offroad, 36.266389, -115.022722
+493, LVMS - Outside Road Course - Full, 36.268111, -115.016833
+494, LVMS - Outside Road Course - Short, 36.268111, -115.016833
+495, LVMS - Superspeedway Oval, 36.274500, -115.012583
+496, Lydden Hill, 51.177333, 1.198167
+497, M1 Concourse, 42.621028, -83.284528
+498, Macau Kart Track, 22.132917, 113.560694
+499, Madera Speedway, 36.972111, -120.076611
+500, Madison Intl. Speedway, 42.906611, -89.326583
+501, Magny-Cours Club Circuit, 46.862694, 3.166806
+502, Magny-Cours GP Circuit, 46.864083, 3.163722
+503, Magny-Cours Kart, 46.863194, 3.157250
+504, Magny-Cours National Circuit, 46.864083, 3.163722
+505, Mallala Motor Racing Circuit, -34.415278, 138.505917
+506, Mallory Park, 52.598639, -1.336972
+507, Manfield Autocourse, -40.235778, 175.558444
+508, Mantorp Park, 58.369111, 15.283778
+509, Mar del Plata, -37.994750, -57.638722
+510, Marina Bay Street Circuit, 1.290472, 103.864333
+511, Martinsville Speedway, 36.634222, -79.852278
+512, Marulan DTC, -34.758556, 149.980778
+513, Mas du Clos, 45.936111, 2.301694
+514, Matsi, 57.668611, 26.694750
+515, Maui Puunene Kart Track, 20.814028, -156.457083
+516, Maze Sea Park, 37.744917, 138.801722
+517, McNamara Park, -37.832833, 140.649750
+518, Mecaglisse, 46.215611, -74.109028
+519, Medford Kart Track, 42.417056, -122.804472
+520, Mega Space, -19.792000, -43.880611
+521, Melbourne GP Albert Park, -37.850056, 144.969000
+522, Memphis - Oval, 35.282167, -89.946833
+523, Memphis - Road Course, 35.278806, -89.940778
+524, Michiana Raceway Park, 41.594278, -86.410444
+525, Michigan Intl. Speedway, 42.067639, -84.244750
+526, Mid America Motorplex - Full, 41.024556, -95.821222
+527, Mid America Motorplex - Short, 41.024556, -95.821222
+528, Mid-Nebraska Speedway, 40.790583, -98.337972
+529, Mid-Ohio - Full, 40.689444, -82.635278
+530, Mid-Ohio - Short, 40.689444, -82.635278
+531, Midland Karting - Intl. Circuit, 52.711583, -1.794111
+532, Midland Karting - National Circuit, 52.711250, -1.795194
+533, Midvaal, -26.613472, 28.058722
+534, Miguel E Abed, 19.027917, -97.989750
+535, Milwaukee Mile, 43.020444, -88.012889
+536, Miramichi, 47.038833, -65.529333
+537, Misano World Circuit, 43.962194, 12.684222
+538, Mission Raceway Park, 49.126694, -122.325583
+539, Misso, 57.615361, 27.262528
+540, Mobara - Long Course, 35.382389, 140.281944
+541, Mobara - Short Course, 35.382000, 140.280861
+542, Monaco, 43.735028, 7.421250
+543, Mondello Park - Intermediate, 53.257139, -6.745194
+544, Mondello Park - International, 53.257139, -6.745194
+545, Mondello Park - Main S/F Only, 53.257139, -6.745194
+546, Mondello Park - National, 53.257139, -6.745194
+547, Mondello Park - Short, 53.257139, -6.745194
+548, Mondercange, 49.547194, 5.974722
+549, Mont-Tremblant - Full Track, 46.193306, -74.611500
+550, Mont-Tremblant - North Loop, 46.193306, -74.611500
+551, Mont-Tremblant - South Loop, 46.187944, -74.611389
+552, Mont-Tremblant Kart - Full, 46.186333, -74.613500
+553, Mont-Tremblant Kart - North, 46.186333, -74.613500
+554, Mont-Tremblant Kart - South, 46.186028, -74.615056
+555, Montalegre, 41.846194, -7.757194
+556, Montana Raceway Park, 48.292417, -114.338250
+557, Monteblanco, 37.358833, -6.571472
+558, Monterrey - Circuit, 25.860611, -100.218028
+559, Monterrey - Kart, 25.857278, -100.217444
+560, Montezuma County Speedway, 37.345083, -108.505389
+561, Monticello - Full Track, 41.623917, -74.698444
+562, Monticello - Kart, 41.624889, -74.699056
+563, Monticello - Mushroom Course, 41.620139, -74.698056
+564, Monticello - North Course, 41.623917, -74.698444
+565, Monticello - Sixty Six, 41.623917, -74.698444
+566, Monticello - South Course, 41.620139, -74.698056
+567, Monticello Karting, 30.500278, -83.795056
+568, Montmagny, 46.937528, -70.553361
+569, Monza, 45.618972, 9.281194
+570, Mores, 40.508278, 8.832083
+571, Morgan Park Raceway, -28.262056, 152.036417
+572, Moscow Autodrom, 55.564528, 37.991056
+573, Moscow Raceway, 55.996056, 36.270528
+574, Most, 50.519444, 13.607750
+575, Motegi East 3.4km Course, 36.531861, 140.236583
+576, Motegi Full 4.8km Course, 36.533000, 140.226722
+577, Motegi North Course, 36.538444, 140.232028
+578, Motegi Oval, 36.532722, 140.226111
+579, Motegi West 1.4km Course, 36.533000, 140.226722
+580, Motopark Raceway, 62.057639, 27.559861
+581, Motorland Aragon, 41.078306, -0.197833
+582, Motorland Aragon - Kart, 41.075472, -0.188639
+583, Motorsports Park Hastings, 40.580139, -98.351306
+584, Mount Panorama Circuit, -33.439222, 149.558111
+585, MSR Cresson - East 1.7 Mile CCW, 32.523111, -97.615278
+586, MSR Cresson - East 1.7 Mile CW, 32.523111, -97.615278
+587, MSR Cresson - Full Track CCW, 32.523111, -97.615278
+588, MSR Cresson - West 1.3 Mile CCW, 32.523417, -97.619694
+589, MSR Houston - Full Track CCW, 29.279000, -95.422417
+590, MSR Houston - Full Track CW, 29.279000, -95.422417
+591, MSR Houston - Kart, 29.277556, -95.425250
+592, MSR Houston - LeMons Loop CCW, 29.279000, -95.422417
+593, MSR Houston - LeMons Loop CW, 29.279000, -95.422417
+594, MSR Houston - Long Outer Loop CCW, 29.277361, -95.419472
+595, MSR Houston - Long Outer Loop CW, 29.277361, -95.419472
+596, MSR Houston - NASCAR Loop CCW, 29.279000, -95.422417
+597, MSR Houston - NASCAR Loop CW, 29.279000, -95.422417
+598, MSR Houston - Short Outer Loop CCW, 29.277361, -95.419472
+599, MSR Houston - Short Outer Loop CW, 29.277361, -95.419472
+600, MSR Houston - Trooper Loop CCW, 29.279000, -95.422417
+601, MSR Houston - Trooper Loop CW, 29.279000, -95.422417
+602, Mugello Circuit, 43.997583, 11.371444
+603, Mussleman Honda Circuit, 32.035889, -110.794917
+604, Nakayama - Kart, 34.783528, 134.177778
+605, Nakayama Circuit, 34.786083, 134.177000
+606, Nardo Handling Track, 40.318611, 17.826667
+607, Nardo Ring, 40.318417, 17.806000
+608, Nashville Superspeedway, 36.046222, -86.409667
+609, Nasu Motor Sports Land, 36.970806, 140.127417
+610, Navak Track, 44.836611, 19.963056
+611, Navarra, 42.559222, -2.168056
+612, Navarra - Kart, 42.557889, -2.168000
+613, Navarro Zonal Circuit, -35.019000, -59.278694
+614, Navarro Zonal Oval, -35.017917, -59.282889
+615, NC Quarter Midget, 35.620056, -80.502167
+616, NCCAR, 36.479389, -77.579833
+617, NCM - East Circuit, 37.002889, -86.364583
+618, NCM - Full Track, 37.001028, -86.368583
+619, NCM - Outer Course, 37.001028, -86.368583
+620, NCM - West Circuit, 37.001028, -86.368583
+621, Nelson Ledges Full Track, 41.307083, -81.014111
+622, Nelson Ledges Short Course, 41.307083, -81.014111
+623, Nelson Piquet, -15.772833, -47.900250
+624, Nelson Piquet - Kart, -15.778389, -47.896500
+625, Nemuno Ziedas, 54.915694, 23.703944
+626, New Hampshire Intl. - Oval, 43.363083, -71.462000
+627, New Hampshire Intl. - Road Course, 43.363083, -71.462000
+628, New York Safety Track, 42.487611, -74.779417
+629, NJMP - Kart (Avenger), 39.361750, -75.058139
+630, NJMP - Kart (Full), 39.363111, -75.058528
+631, NJMP - Kart (Liberator), 39.363111, -75.058528
+632, NJMP - Lightning, 39.361472, -75.054111
+633, NJMP - Thunderbolt, 39.360806, -75.073611
+634, No Problem Raceway Park, 30.018333, -91.080750
+635, NOLA - Kart Full, 29.886250, -90.191111
+636, NOLA - Kart North, 29.887528, -90.192083
+637, NOLA - Kart South, 29.886250, -90.191111
+638, NOLA - North Course Long, 29.885389, -90.199167
+639, NOLA - North Course Short, 29.885389, -90.199167
+640, Norisring, 49.431139, 11.124667
+641, North Pole Speedway, 64.785306, -147.395000
+642, North Texas Karters, 33.307056, -97.190778
+643, Northstar Raceway, 51.024667, -113.355528
+644, Northstar Speedway, 61.559056, -149.274583
+645, Norway Motorsports, 41.467778, -88.667222
+646, Nueve de Julio, -35.435444, -60.910806
+647, Nurburgring Grand Prix, 50.335583, 6.947583
+648, Nurburgring Nordschleife, 50.343583, 6.960056
+649, Nurburgring Nordschleife BTG, 50.351750, 6.980778
+650, Nutts Corner, 54.622861, -6.144083
+651, Ocala Gran Prix, 29.228472, -82.189806
+652, Okayama - Kart, 34.914667, 134.217861
+653, Okayama Intl. Circuit, 34.914278, 134.218944
+654, Old Bridge Township Raceway, 40.334917, -74.353556
+655, "Olivers Mount", 54.259139, -0.409750
+656, Oran Park Raceway, -34.007861, 150.733028
+657, Orange Show Speedway, 34.087139, -117.292639
+658, Ordos Intl. Circuit, 39.623667, 109.869722
+659, Oregon Raceway Park, 45.363778, -120.744528
+660, Orlando Kart Center, 28.412722, -81.379667
+661, Orlando Moura, -20.475917, -54.466028
+662, Oschersleben, 52.027528, 11.278111
+663, Oschersleben - Kart, 52.025417, 11.282361
+664, Ouest Parisien, 48.759250, 1.371889
+665, Ouest Parisien - Kart, 48.760472, 1.369944
+666, Ouest Parisien - Rallycross, 48.756194, 1.370750
+667, Oulton Park Circuit, 53.180000, -2.612833
+668, Ovalo Aguascalientes Mexico, 21.721833, -102.328556
+669, Pacific Raceways - Grand Prix, 47.324194, -122.151778
+670, Pacific Raceways - Road Course, 47.320917, -122.147528
+671, Pacifico Sport, -33.665472, -71.559722
+672, Padborg Park, 54.869111, 9.275694
+673, Paeroa Street Circuit, -37.379639, 175.669778
+674, Pallas Karting - 1500m, 53.133389, -8.353028
+675, Pallas Karting - 500m, 53.133778, -8.354750
+676, Palm Beach - Kart, 26.920556, -80.307056
+677, Palm Beach Intl. Raceway, 26.920722, -80.305944
+678, Palmer Motorsports Park, 42.235222, -72.245639
+679, Panama Intl Circuit, 8.969639, -79.830167
+680, Pannonia - Kart, 47.306889, 17.046056
+681, Pannonia-Ring, 47.306000, 17.047833
+682, Paradise Speedway Maui, 20.817833, -156.463306
+683, Parcmotor Castelloli, 41.592139, 1.688083
+684, Pau Arnos, 43.447111, -0.532500
+685, Paul Armagnac (Nogaro), 43.770639, -0.040556
+686, Paul Ricard - Circuit 1 GP, 43.251194, 5.793056
+687, Paul Ricard - Circuit 2-3, 43.251194, 5.793056
+688, Paul Ricard - West Circuit, 43.256889, 5.781694
+689, Pedro Cofino, 14.382472, -90.820667
+690, Pembrey Circuit, 51.705861, -4.323833
+691, Pergusa, 37.520167, 14.305444
+692, Perris Auto Speedway, 33.849417, -117.201694
+693, Pesamaki - East Course, 62.019472, 22.113500
+694, Pesamaki - Kart, 62.018306, 22.110583
+695, Pesamaki - West Course, 62.017861, 22.104778
+696, PFI Karting, 53.038194, -0.660944
+697, Phakisa Oval Track, -27.904694, 26.709528
+698, Phakisa Road Course, -27.904778, 26.711167
+699, Phillip Island Circuit, -38.502639, 145.232111
+700, Phillips County Raceway, 40.591583, -102.304139
+701, Phoenix Intl. Raceway, 33.375917, -112.311361
+702, Phoenix Kart Racing, 33.690778, -112.156139
+703, Pikes Peak Intl. Hill Climb, 38.839806, -105.045028
+704, Pikes Peak Qtr Midget, 38.836917, -104.374722
+705, Piracicabano, -22.738889, -47.533333
+706, Piracicabano - Kart, -22.737778, -47.533861
+707, Pista Salentina-Ugento, 39.891028, 18.133583
+708, Pitt Race - Full Track, 40.850722, -80.347778
+709, Pitt Race - North Course, 40.850722, -80.347778
+710, Pitt Race - South Course, 40.846333, -80.348750
+711, Pitt Race - Wilson Kart, 40.849750, -80.344611
+712, Pocono - East Course, 41.057361, -75.504917
+713, Pocono - Full Track, 41.052639, -75.511722
+714, Pocono - North Course, 41.054389, -75.514750
+715, Pocono - South Course, 41.052472, -75.506500
+716, Pocono - Tri Oval, 41.052639, -75.511722
+717, Pomposa - Junior, 44.710833, 12.215167
+718, Pomposa - Senior, 44.711194, 12.216722
+719, Ponce Intl. Speedway, 17.971667, -66.676917
+720, Porsche Leipzig, 51.405528, 12.297500
+721, Port Imperial Street Circuit, 40.776889, -74.011194
+722, Portimao - Kart, 37.233194, -8.636361
+723, Portimao Circuit, 37.229778, -8.629944
+724, Portland Intl. Raceway, 45.595028, -122.694472
+725, Potosino, 22.091278, -100.725639
+726, Potrero de los Funes Circuit, -33.223917, -66.238361
+727, Powerbuilt Raceway, -43.530583, 172.480944
+728, Poznan, 52.420306, 16.806500
+729, PPIR - Infield Course, 38.591806, -104.676278
+730, PPIR - Infield Oval, 38.591806, -104.676278
+731, PPIR - Kart, 38.592194, -104.678222
+732, PPIR - Oval, 38.591000, -104.678222
+733, PPIR - Roval, 38.591000, -104.678222
+734, PPIR - Roval Reverse (CW), 38.591000, -104.678222
+735, Prestwold Hall - South Circuit, 52.794361, -1.129361
+736, Prince George Circuit, -33.049528, 27.870000
+737, Prowers County Motorsports Park, 38.202056, -102.605944
+738, PTC Escuela, 43.297167, -7.339222
+739, Pueblo Motorsports Park, 38.299889, -104.677417
+740, Pukekohe Park Raceway, -37.215556, 174.915833
+741, Putnam Park Road Course, 39.582306, -86.742306
+742, Queensland Raceway, -27.690639, 152.654611
+743, Queretaro, 20.585583, -100.328917
+744, Quest Karting - Essay, 48.553472, 0.274472
+745, Radom Kart Track, 51.417056, 21.149389
+746, Red Bull Ring - Full Track, 47.220000, 14.765111
+747, Red Bull Ring - North Circuit, 47.226389, 14.755417
+748, Red Bull Ring - South Circuit, 47.220000, 14.765111
+749, Red Star Raceway, -26.075083, 28.755167
+750, Reem - Kart, 24.383222, 45.976500
+751, Reem Intl. Circuit, 24.382722, 45.979222
+752, Regencos Kart Track, 41.957639, 3.176167
+753, Reno-Fernley Raceway, 39.539389, -119.241833
+754, Riccardo Paletti, 44.680667, 10.020917
+755, Richmond Intl. Raceway, 37.591083, -77.419667
+756, Ring Djursland, 56.337194, 10.682389
+757, Riverside Speedway Ste-Croix, 46.631806, -71.788306
+758, Road America, 43.797889, -87.989639
+759, Road America - Kart, 43.798222, -88.000694
+760, Road Atlanta - Full, 34.150361, -83.814194
+761, Road Atlanta - North, 34.150361, -83.814194
+762, Road Atlanta - South, 34.141361, -83.817278
+763, Rockford Speedway, 42.363944, -89.017722
+764, Rockingham Motor Speedway, 52.514722, -0.662333
+765, Rockingham Raceway, 34.975833, -79.610889
+766, Rocky Mountain Qtr Midget, 40.039000, -104.950556
+767, Roebling Road Raceway, 32.167056, -81.322861
+768, Roque Perez, -35.390528, -59.345167
+769, Roxby Downs, -30.547694, 136.886083
+770, Rozzano, 45.387556, 9.172778
+771, Rudskogen, 59.365722, 11.263194
+772, Rudskogen - Kart, 59.368111, 11.260722
+773, S. Colorado Qtr Midget, 38.300139, -104.674583
+774, Sabana Seca, 18.436750, -66.210111
+775, Sachsenring, 50.791778, 12.688083
+776, Saint-Eustache, 45.573472, -73.965917
+777, Salem Speedway, 38.600028, -86.139306
+778, Salinas, -2.235722, -80.879222
+779, Salinas Intl. Speedway, 17.970417, -66.265667
+780, Salzburgring, 47.823056, 13.169056
+781, San Luis 400, 22.182472, -100.990722
+782, San Martin, -45.902750, -67.543778
+783, San Martin - Kart Track, -45.903667, -67.543361
+784, Sanair - Kart, 45.528167, -72.881917
+785, Sanair - Oval Track, 45.532611, -72.878556
+786, Sanair - Road Course, 45.529639, -72.882667
+787, Sanair - Speedway Road Course, 45.531139, -72.875444
+788, Sanair - Super Speedway, 45.530972, -72.876222
+789, Sanair - Winter Course, 45.525500, -72.887444
+790, Sandia - Clay Oval, 35.019583, -106.862556
+791, Sandia - Half Mile Oval, 35.020611, -106.858861
+792, Sandia - Qtr Midget, 35.021861, -106.861361
+793, Sandia - Quarter Mile Oval, 35.020611, -106.858861
+794, Sandia - Road Course, 35.020611, -106.858861
+795, Sandown, -37.949361, 145.164333
+796, Sandown Park, 51.376222, -0.361750
+797, Sandy Hook Speedway, 39.629639, -76.308250
+798, Santa Cruz do Sul, -29.800889, -52.434167
+799, Sao Bernardo do Campo, -23.673000, -46.572722
+800, Sarno, 40.837639, 14.567639
+801, Sayre Speedway, 33.723944, -86.992278
+802, SBR Motorsports Park, 38.984889, -104.431417
+803, Scandinavian Raceway, 57.261500, 13.599361
+804, Schleizer Dreieck, 50.560917, 11.821278
+805, Sebring - Full, 27.450222, -81.353750
+806, Sebring - North, 27.452639, -81.356833
+807, Sebring - South, 27.450222, -81.353750
+808, Sele, 40.604306, 14.949139
+809, Sendai Hi-Land - North Kart, 38.288361, 140.623528
+810, Sendai Hi-Land Raceway, 38.286472, 140.621972
+811, Sentul - Kart, -6.524083, 106.859694
+812, Sentul Intl. Circuit, -6.536417, 106.856361
+813, Sepang - Kart, 2.763639, 101.729167
+814, Sepang - North Track, 2.760750, 101.738333
+815, Sepang - South Track, 2.759639, 101.737417
+816, Sepang Intl. Circuit, 2.760750, 101.738333
+817, Sergio Santander Benavente, -18.388250, -70.334056
+818, Serres, 41.073139, 23.517806
+819, Serres - Kart, 41.073722, 23.519389
+820, Shanghai F1 Kart World, 31.342306, 121.218167
+821, Shanghai Intl. Circuit, 31.337278, 121.220583
+822, Shannonville - Fabi Circuit, 44.229278, -77.162417
+823, Shannonville - Long Track, 44.225000, -77.159389
+824, Shannonville - Nelson Circuit, 44.225000, -77.159389
+825, Shannonville - Pro Track, 44.225000, -77.159389
+826, Siena, 43.308611, 11.475944
+827, Sierra Esmeralda, 19.526667, -99.358306
+828, Silverstone - Grand Prix, 52.068278, -1.023472
+829, Silverstone - International, 52.068278, -1.023472
+830, Silverstone - National, 52.078694, -1.017167
+831, Silverstone - National Ext, 52.078694, -1.017167
+832, Silverstone - Porsche, 52.067083, -1.011694
+833, Silverstone - Stowe Circuit, 52.067917, -1.016306
+834, Simraceway Kart, 38.155028, -122.452417
+835, Siracusa, 37.067861, 15.252722
+836, Slideways Karting, 41.343667, -93.107083
+837, Slomczyn, 51.879083, 20.928056
+838, Slovakiaring, 48.055306, 17.569944
+839, Smolensk Ring, 54.987583, 33.365861
+840, Snaefell Mountain Course, 54.168306, -4.477333
+841, Snetterton 100 CCW, 52.464833, 0.944361
+842, Snetterton 100 CW, 52.464833, 0.944361
+843, Snetterton 200, 52.463389, 0.944722
+844, Snetterton 300, 52.463389, 0.944722
+845, Sochi Autodrom, 43.411444, 39.969722
+846, Sodegaura - Full, 35.394944, 140.088000
+847, Sodegaura - Inner, 35.394361, 140.089083
+848, Sodegaura - Outer, 35.394944, 140.088000
+849, Sologne Karting - Salbris, 47.360917, 2.049222
+850, Sonoma Raceway, 38.161472, -122.454722
+851, South Boston Speedway, 36.709806, -78.869111
+852, South Dakota Circuit, 6.490472, -58.251972
+853, South Georgia Motorsports Park, 31.064139, -83.397000
+854, South Wales Karting Centre, 51.433944, -3.496417
+855, Southern Oregon Speedway, 42.418222, -122.793944
+856, Spa Nishirua, 34.775194, 137.187167
+857, Spa-Francorchamps, 50.444083, 5.968333
+858, SpeedVegas, 35.933028, -115.188444
+859, Spokane Raceway - Kart, 47.658083, -117.591528
+860, Spokane Raceway - Oval Track, 47.659861, -117.571750
+861, Spokane Raceway - Road Course, 47.660583, -117.574750
+862, Sportsland SUGO, 38.142278, 140.777694
+863, Sportsland SUGO - Kart, 38.141278, 140.772000
+864, Spreewaldring - Kart, 51.998528, 13.689944
+865, Spreewaldring Motodrom, 51.999556, 13.687722
+866, Spring Mountain - East Start/Finish, 36.171139, -115.904889
+867, Spring Mountain - North Start/Finish, 36.172250, -115.910111
+868, Spring Mountain - South Start/Finish, 36.169083, -115.909833
+869, Spring Mountain - West Start/Finish, 36.172806, -115.914000
+870, SRA Karting Intl., 45.828667, -73.605778
+871, St. Petersburg - Large 3.1km, 59.785028, 30.459611
+872, St. Petersburg - Small 1.3km, 59.781583, 30.453417
+873, Star Speedway, 43.029694, -71.040917
+874, Stratotech Park, 53.736417, -113.233917
+875, Streets of Willow, 34.874806, -118.258750
+876, Sturgis Buffalo Chip, 44.419500, -103.403083
+877, Sturup Raceway, 55.531500, 13.357389
+878, Subic Intl. Raceway, 14.798611, 120.267333
+879, Summit Point - Jefferson, 39.234139, -77.972333
+880, Summit Point - Main Full, 39.235194, -77.969056
+881, Summit Point - Main North, 39.235194, -77.969056
+882, Summit Point - Main South, 39.231861, -77.970472
+883, Summit Point - Shenandoah, 39.241389, -77.979722
+884, Summit Point - Washington Kart, 39.235194, -77.975667
+885, Surfers Paradise Street Circuit, -27.986167, 153.427250
+886, Suzuka - Full Track, 34.842917, 136.540694
+887, Suzuka - Short Course, 34.842917, 136.540694
+888, Suzuka - South Course Kart, 34.843194, 136.528389
+889, Suzuka - West Course, 34.845278, 136.525778
+890, Sydney Motorsport - Full, -33.803778, 150.870944
+891, Sydney Motorsport - North, -33.803778, 150.870944
+892, Sydney Motorsport - South, -33.807361, 150.869917
+893, Symmons Plains Raceway, -41.657583, 147.249972
+894, Tabasalu, 59.412028, 24.547056
+895, Taebaek Racing Park, 37.082694, 129.018389
+896, Talladega Gran Prix Raceway, 33.504694, -86.001444
+897, Talladega Super Speedway, 33.563278, -86.069222
+898, Taruma, -30.050722, -51.017361
+899, Taruma - Kart, -30.050722, -51.020500
+900, Taupo Motorsport Park, -38.662694, 176.146667
+901, Tazio Nuvolari - Full, 45.072361, 8.991833
+902, Tazio Nuvolari - Kart, 45.072000, 8.993056
+903, Tazio Nuvolari - North, 45.072361, 8.991833
+904, Tazio Nuvolari - South, 45.070722, 8.993611
+905, Teretonga Park, -46.441000, 168.263111
+906, Termas de Rio Hondo, -27.511028, -64.919056
+907, Texas Motor Speedway - Dirt Track, 33.033167, -97.274833
+908, "Texas Motor Speedway - Lil Track", 33.035694, -97.275944
+909, Texas Motor Speedway - Oval, 33.037306, -97.284250
+910, Texas Motor Speedway - Roval, 33.037306, -97.284250
+911, Texas World Speedway, 30.538028, -96.224417
+912, Thailand Circuit - Full, 13.910861, 100.167361
+913, Thailand Circuit - North, 13.911944, 100.168000
+914, Thailand Circuit - South, 13.910861, 100.167361
+915, The Bend - East Circuit, -35.312139, 139.517833
+916, The Bend - GP Circuit, -35.307278, 139.511250
+917, The Bend - International, -35.307278, 139.511250
+918, The Bend - West Circuit, -35.307278, 139.511250
+919, The Ridge - East Short Course, 47.254694, -123.192472
+920, The Ridge - Full Track, 47.254694, -123.192472
+921, The Ridge - Kart, 47.253833, -123.197861
+922, Thompson Speedway - Little Oval, 41.984361, -71.824194
+923, Thompson Speedway - Oval, 41.981833, -71.825417
+924, Thompson Speedway - Road Course, 41.979694, -71.827083
+925, Three Sisters Race Circuit, 53.506139, -2.632861
+926, Thruxton Circuit, 51.207667, -1.608972
+927, Thruxton Kart, 51.203306, -1.609944
+928, Thunder Mountain Speedway, 38.665917, -107.982944
+929, Thunderhill - East, 39.538472, -122.331194
+930, Thunderhill - Full, 39.538472, -122.331194
+931, Thunderhill - West, 39.537444, -122.338750
+932, Thy Karting, 57.074056, 8.690333
+933, Tianma Circuit, 31.078833, 121.115083
+934, Timaru Intl. Motor Raceway, -44.296528, 171.202778
+935, Tipperary Intl. Raceway, 52.467889, -7.792806
+936, Tire Rack Test Track, 41.729333, -86.348250
+937, Tocancipa, 4.961139, -73.947250
+938, Todd Road Go Kart, -37.830250, 144.913528
+939, Tomin - A Course, 36.112306, 140.319917
+940, Tomin - B Course, 36.112500, 140.319000
+941, Top Gear UK Track, 51.118667, -0.536444
+942, Top Gear USA Track, 33.670944, -117.734278
+943, Toronto Motorsports - Full Track, 42.903000, -79.857944
+944, Toronto Motorsports - North Course, 42.905111, -79.854833
+945, Toronto Motorsports - West Course, 42.903000, -79.857944
+946, Townsville Street Circuit, -19.272056, 146.810944
+947, TraxKarting - International, 53.756056, -2.771083
+948, TraxKarting - National, 53.756861, -2.766528
+949, TraxKarting - Pro Circuit, 53.756056, -2.771083
+950, Triovalo Bernardo Obregon, 20.445111, -103.269028
+951, Tripoli Airport, 37.523750, 22.399611
+952, Trois-Rivieres, 46.347222, -72.558583
+953, Tsukuba 1000 Kart, 36.151000, 139.924861
+954, Tsukuba 2000 - Full, 36.150139, 139.919528
+955, Tsukuba 2000 - Short, 36.150139, 139.919528
+956, Tsukuba Oval, 36.152056, 139.921389
+957, TT Circuit Assen, 52.962306, 6.524111
+958, Tucson Speedway, 32.036833, -110.789389
+959, Turagua, 10.140194, -67.508389
+960, Umbria, 43.131250, 12.239111
+961, Unser Centennial - East CCW, 39.569750, -104.830694
+962, Unser Centennial - East CW, 39.569750, -104.830694
+963, Unser Centennial - Full CCW, 39.569778, -104.831083
+964, Unser Centennial - Full CW, 39.569778, -104.831083
+965, Unser Centennial - West CCW, 39.569917, -104.831417
+966, Unser Centennial - West CW, 39.569917, -104.831417
+967, USA Raceway, 32.116472, -110.898556
+968, Utah Motorsports - Dirt Track, 40.584667, -112.385306
+969, Utah Motorsports - East, 40.583139, -112.376389
+970, Utah Motorsports - Full, 40.583139, -112.376389
+971, Utah Motorsports - Kart, 40.585083, -112.377611
+972, Utah Motorsports - Outer, 40.583139, -112.376389
+973, Utah Motorsports - West, 40.583083, -112.382417
+974, "Val dArgenton", 47.007722, -0.431472
+975, Val de Vienne, 46.197583, 0.633806
+976, Val Vibrata Kartodromo, 42.810250, 13.688361
+977, Valencia, 39.483500, -0.631000
+978, Valencia Street Circuit, 39.457861, -0.331722
+979, Valerbanen, 60.702111, 11.813722
+980, Valle dei Templi, 37.386167, 13.752972
+981, Vallelunga Circuit, 42.157667, 12.369000
+982, Vancouver Island, 48.799889, -123.779333
+983, Varennes Karting, 46.322083, 3.359028
+984, Vasco Sameiro, 41.588222, -8.443111
+985, Vasco Sameiro - Kart, 41.587861, -8.445111
+986, Vegas Off Road, 35.957222, -114.915778
+987, Vegas Quilaco, -40.257972, -73.029444
+988, Venancio Aires Kart, -29.641111, -52.200361
+989, Virazh - Kart, 50.649167, 36.587833
+990, Virginia Intl. Raceway - Full, 36.568806, -79.206667
+991, Virginia Intl. Raceway - Grand East, 36.568806, -79.206667
+992, Virginia Intl. Raceway - Grand West, 36.568806, -79.206667
+993, Virginia Intl. Raceway - North, 36.568806, -79.206667
+994, Virginia Intl. Raceway - Patriot, 36.560833, -79.207694
+995, Virginia Intl. Raceway - South, 36.554111, -79.206806
+996, Viterbo, 42.484861, 12.069639
+997, VIVA Karting Track (Bahrain), 26.028639, 50.506472
+998, Vizcachas, -33.601333, -70.524056
+999, Vysokaya Gora, 55.874056, 49.265389
+1000, Vysoke Myto, 49.938944, 16.168889
+1001, Wakefield Park - East Loop, -34.841556, 149.688694
+1002, Wakefield Park - Long, -34.840111, 149.685278
+1003, Wakefield Park - Short, -34.840111, 149.685278
+1004, Wallerfield Intl. Raceway, 10.613917, -61.213389
+1005, WallraV, 51.939306, 15.599944
+1006, Waterford Hills - East Short Loop, 42.708083, -83.390139
+1007, Waterford Hills - Full Track, 42.708556, -83.391222
+1008, Waterford Hills - Mid Length, 42.708556, -83.391222
+1009, Waterford Hills - West Short Loop, 42.708556, -83.391222
+1010, Waterford Raceway, 52.126083, -7.559694
+1011, Watkins Glen - Full, 42.341028, -76.928861
+1012, Watkins Glen - Short, 42.341028, -76.928861
+1013, Western Speedway, 48.473361, -123.500333
+1014, White Mountain Speedway, 34.260139, -109.991278
+1015, Whitsunday Circuit, -20.481694, 148.587333
+1016, Wild Horse Pass - Bondurant, 33.264222, -111.967639
+1017, Wild Horse Pass - Dirt, 33.264111, -111.959167
+1018, Wild Horse Pass - East, 33.273778, -111.963333
+1019, Wild Horse Pass - Firebird, 33.269028, -111.969333
+1020, Wild Horse Pass - West, 33.266222, -111.971778
+1021, Willow Horse Thief Mile - CCW, 34.878083, -118.263028
+1022, Willow Horse Thief Mile - CW, 34.878083, -118.263028
+1023, Willow Kart Track, 34.870889, -118.266556
+1024, Willow Speedway Oval, 34.879889, -118.257556
+1025, Willow Stadium Oval, 34.876806, -118.257472
+1026, Windhoek, -22.569306, 17.001389
+1027, Winton - Club Circuit, -36.516833, 146.084194
+1028, Winton - National Circuit, -36.519750, 146.087889
+1029, Xian Kart Track, 34.376361, 108.864083
+1030, Yahuarcocha, 0.380028, -78.098583
+1031, Yas Marina - Full Track, 24.469944, 54.605222
+1032, Yas Marina - North Course, 24.469944, 54.605222
+1033, Yas Marina - South Course, 24.464889, 54.605333
+1034, Yas Marina Kartzone, 24.477111, 54.607250
+1035, Zacatecas, 22.640389, -102.485028
+1036, Zandvoort - East Circuit, 52.386583, 4.551833
+1037, Zandvoort - Grand Prix Full, 52.389000, 4.540861
+1038, Zandvoort - National Circuit, 52.389000, 4.540861
+1039, Zeura - Kart, 41.829222, -0.812500
+1040, Zeura Intl. Circuit, 41.827806, -0.811778
+1041, Zhongshan Kart Track, 22.561722, 113.406833
+1042, Zhuhai Intl. Circuit, 22.367111, 113.559889
+1043, Zolder, 50.989028, 5.255722
+1044, Zwartkops - Kart, -25.809889, 28.109833
+1045, Zwartkops Raceway, -25.809972, 28.112472
+1046, 3045 Sassafras Tree Ct, 38.579155, -77.302975

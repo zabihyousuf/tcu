@@ -115,7 +115,7 @@ export default {
     seeIfSessionShouldStart() {
       if (!this.running) {
         this.$store.dispatch("getIfLapped");
-        if (this.$store.state.lapped) {
+        if (this.$store.state.lapped == 'true' || this.$store.state.lapped == true) {
           this.start();
           // this.$forceUpdate();
         } else {
