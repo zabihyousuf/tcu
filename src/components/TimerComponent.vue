@@ -101,6 +101,7 @@ export default {
       getLapLocation: null,
       selectedTrack: "",
       temp: null,
+      timeWhenLastLapped: null,
     };
   },
   computed: {
@@ -137,7 +138,8 @@ export default {
 
       this.started = setInterval(this.clockRunning, 10);
       this.running = true;
-      this.temp = setInterval(this.callEverySecond, 250);
+      this.timeWhenLastLapped = new Date();
+      this.temp = setInterval(this.callEverySecond, 1000);
     },
     stop() {
       this.running = false;
@@ -244,8 +246,9 @@ export default {
     },
     callEverySecond() {
       this.$store.dispatch("getIfLapped");
-      if (this.$store.state.lapped === "true" && this.running) {
+      if (this.$store.state.lapped === "true" && this.running && (Math.abs(this.timeWhenLastLapped-new Date() > 10000))) {
         this.lap();
+        this.timeWhenLastLapped = new Date();
       }
     },
   },

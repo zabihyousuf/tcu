@@ -36,7 +36,7 @@ def haversine(lon1, lat1, lon2, lat2):
     return c * r
 
 def lappedHelper(lon1, lat1, lon2, lat2):
-    radius = 0.0804672 # in kilometer
+    radius = 0.07 # in kilometer
     a = haversine(lon1, lat1, lon2, lat2)
     if a <= radius:
         return (True, a)

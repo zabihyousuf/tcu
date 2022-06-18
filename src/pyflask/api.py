@@ -348,6 +348,7 @@ def findClosestTrack(device):
             return None
         else:
             sorted(allCloseTracks, key=lambda d: d['distance'])
+            print(allCloseTracks[-1]['track'])
             return allCloseTracks[-1]['track']
     except Exception as e:
         logger.error(
